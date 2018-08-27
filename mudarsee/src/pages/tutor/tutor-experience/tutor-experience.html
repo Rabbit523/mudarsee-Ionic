@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'tutor_exper.title'| translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list contact-list>
+    <ion-item text-wrap *ngFor="let experience of experiences">
+      <h4>{{experience.from_date}} - {{experience.to_date}}
+
+            </h4>
+      <p><strong color="danger">{{experience.company}} - {{experience.role}}</strong></p>
+      <p>{{experience.description}}</p>
+      <ion-icon item-right name="md-create" color="danger" (click)="editExperience(experience)"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="addExperience()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

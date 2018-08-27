@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_booking_details.title'|translate}}</ion-title>
+    <ion-buttons end *ngIf="booking_status.length!=0">
+      <button *ngIf="bookingDetails.status!='closed'" (click)="changeStatusAlert()" ion-button icon-only>
+        <ion-icon name="md-create"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-left>
+        <img *ngIf="bookingDetails.student_photo==''" src="{{serviceName.defaultImage}}">
+        <img *ngIf="bookingDetails.student_photo!=''" src="{{serviceName.profileUrl}}{{bookingDetails.student_photo}}">
+      </ion-avatar>
+      <h2>{{bookingDetails.student_name}}</h2>
+      <p>{{bookingDetails.course_name}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{'stu_booking_details.content'|translate}}</h2>
+      <p [innerHTML]="bookingDetails.content" text-capitalize></p>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.value'|translate}}</p>
+          <h2>{{bookingDetails.duration_value}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.type'|translate}}</p>
+          <h2>{{bookingDetails.duration_type}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.fee'|translate}}</p>
+          <h2>{{bookingDetails.fee}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.per'|translate}}</p>
+          <h2>{{bookingDetails.per_credit_value}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.preferred'|translate}}</p>
+          <h2>{{bookingDetails.start_date}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.date'|translate}}</p>
+          <h2>{{bookingDetails.end_date}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.time'|translate}}</p>
+          <h2>{{bookingDetails.time_slot}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.day_off'|translate}}</p>
+          <h2>{{bookingDetails.days_off}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <p>{{'stu_booking_details.location'|translate}}</p>
+      <h2>{{bookingDetails.preferred_location}}</h2>
+    </ion-item>
+    <ion-item text-wrap>
+      <p>{{'stu_booking_details.message'|translate}}</p>
+      <h2>{{bookingDetails.message}}</h2>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.admin'|translate}}</p>
+          <h2>{{bookingDetails.admin_commission}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.prev'|translate}}</p>
+          <h2 color="secondary">{{bookingDetails.prev_status}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.booking'|translate}}</p>
+          <h2>{{bookingDetails.status | case}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.desc'|translate}}</p>
+          <h2>{{bookingDetails.status_desc}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.create'|translate}}</p>
+          <h2>{{bookingDetails.created_at | date:"dd/MM/yyyy"}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.updated'|translate}}</p>
+          <h2>{{bookingDetails.updated_at | date:"dd/MM/yyyy"}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <!-- <ion-fab bottom right>
+        <button ion-fab color="primary" (click)="openChatPage(bookingDetails)"><ion-icon name="ios-chatboxes-outline"></ion-icon></button>
+    </ion-fab>
+    <ion-fab bottom left>
+        <button ion-fab color="danger" (click)="openQuestionAnswerPage(bookingDetails)"><ion-icon name="md-help"></ion-icon></button>
+    </ion-fab> -->
+  <ion-fab bottom right #fab>
+    <button ion-fab>
+      <ion-icon class="tuts-hand"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab color="danger" (click)="openChatPage(bookingDetails,fab)">
+        <ion-icon class="tuts-chat-1"></ion-icon>
+      </button>
+      <button ion-fab color="danger" (click)="openQuestionAnswerPage(bookingDetails,fab)">
+        <ion-icon name="md-help"></ion-icon>
+      </button>
+      <button ion-fab color="danger" (click)="voiceCall(bookingDetails,fab)">
+        <ion-icon class="tuts-phone-call"></ion-icon>
+      </button>
+      <button ion-fab color="danger" (click)="emailChat(bookingDetails,fab)">
+        <ion-icon class="tuts-envelope"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-footer>

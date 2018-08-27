@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="light" showWhen="ios">{{'add_courses.Cancel'|translate}}</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="addCourseForm" novalidate (ngSubmit)="(addCourseForm.valid && submitted) && addCourse()">
+    <ion-list>
+      <ion-item>
+        <ion-label>{{'add_courses.name'|translate}}</ion-label>
+        <ion-select [(ngModel)]="addCourseData.course_id" formControlName="course_id" placeholder="Select">
+          <ion-option *ngFor="let course of courses" value="{{course.id}}">{{course.name}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!addCourseForm.controls.course_id.pristine || submitted" [name]="(!addCourseForm.controls.course_id.valid && (addCourseForm.controls.course_id.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!addCourseForm.controls.course_id.valid && (addCourseForm.controls.course_id.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'add_courses.type'|translate}}</ion-label>
+        <ion-select [(ngModel)]="addCourseData.duration_type" formControlName="duration_type" placeholder="Select">
+          <ion-option value="hours">{{'add_courses.hr'|translate}}</ion-option>
+          <ion-option value="days">{{'add_courses.days'|translate}}</ion-option>
+          <ion-option value="months">{{'add_courses.months'|translate}}</ion-option>
+          <ion-option value="years">{{'add_courses.year'|translate}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!addCourseForm.controls.duration_type.pristine || submitted" [name]="(!addCourseForm.controls.duration_type.valid && (addCourseForm.controls.duration_type.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!addCourseForm.controls.duration_type.valid && (addCourseForm.controls.duration_type.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'add_courses.value'|translate}}</ion-label>
+        <ion-input type="text" [(ngModel)]="addCourseData.duration_value" formControlName="duration_value"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!addCourseForm.controls.duration_value.pristine || submitted" [name]="(!addCourseForm.controls.duration_value.valid && (addCourseForm.controls.duration_value.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!addCourseForm.controls.duration_value.valid && (addCourseForm.controls.duration_value.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'add_courses.fee'|translate}}</ion-label>
+        <ion-input type="text" [(ngModel)]="addCourseData.fee" formControlName="fee"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!addCourseForm.controls.fee.pristine || submitted" [name]="(!addCourseForm.controls.fee.valid && (addCourseForm.controls.fee.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!addCourseForm.controls.fee.valid && (addCourseForm.controls.fee.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'add_courses.content'|translate}}</ion-label>
+        <ion-textarea type="text" [(ngModel)]="addCourseData.content" formControlName="content"></ion-textarea>
+        <ion-icon class="validation-icon" *ngIf="!addCourseForm.controls.content.pristine || submitted" [name]="(!addCourseForm.controls.content.valid && (addCourseForm.controls.content.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!addCourseForm.controls.content.valid && (addCourseForm.controls.content.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'add_courses.time'|translate}}</ion-label>
+        <ion-input type="text" [(ngModel)]="addCourseData.time_slots" placeholder="HH:mm - HH:mm,HH:mm - HH:mm" formControlName="time_slots"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!addCourseForm.controls.time_slots.pristine || submitted" [name]="(!addCourseForm.controls.time_slots.valid && (addCourseForm.controls.time_slots.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!addCourseForm.controls.time_slots.valid && (addCourseForm.controls.time_slots.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'add_courses.day_off'|translate}}</ion-label>
+        <ion-select [(ngModel)]="addCourseData.days_off" multiple="true" formControlName="days_off" placeholder="Select">
+          <ion-option value="SUN">{{'add_courses.sun'|translate}}</ion-option>
+          <ion-option value="MON">{{'add_courses.mon'|translate}}</ion-option>
+          <ion-option value="TUE">{{'add_courses.tue'|translate}}</ion-option>
+          <ion-option value="WED">{{'add_courses.wed'|translate}}</ion-option>
+          <ion-option value="THU">{{'add_courses.thu'|translate}}</ion-option>
+          <ion-option value="FRI">{{'add_courses.fri'|translate}}</ion-option>
+          <ion-option value="SAT">{{'add_courses.sat'|translate}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'add_courses.order'|translate}}</ion-label>
+        <ion-input type="text" [(ngModel)]="addCourseData.sort_order" formControlName="sort_order"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block round color="danger" type="submit" (click)="submitted=true">{{buttonText}}</button>
+  </form>
+</ion-content>
+

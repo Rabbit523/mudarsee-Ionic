@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_reserve_your_spot.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-card>
+      <ion-item>
+        <ion-label>{{'stu_reserve_your_spot.select'|translate}}</ion-label>
+        <ion-select [(ngModel)]="reserveData.course_id" (ionChange)="changeCourse()">
+          <ion-option *ngFor="let course of courses" value="{{course.course_id}}">{{course.course_name}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+  <ion-list radio-group [(ngModel)]="reserveData.teaching_type">
+    <ion-card>
+      <ion-item-divider> {{'stu_reserve_your_spot.location'|translate}}</ion-item-divider>
+      <ion-row>
+        <ion-col width50>
+          <ion-item>
+            <ion-label>{{'stu_reserve_your_spot.home'|translate}}</ion-label>
+            <ion-radio value="home" item-left></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col width50>
+          <ion-item>
+            <ion-label>{{'stu_reserve_your_spot.online'|translate}}</ion-label>
+            <ion-radio value="online" item-left> </ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-radio value="willing-to-travel" item-left></ion-radio>
+        <ion-label>{{'stu_reserve_your_spot.select_loc'|translate}}</ion-label>
+        <ion-select [(ngModel)]="reserveData.prefered_location">
+          <ion-option *ngFor="let location of tutor_locations" value="{{location.id}}">{{location.tutoring_locations}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+  <ion-list>
+    <ion-card>
+      <ion-item>
+        <ion-label>{{'stu_reserve_your_spot.select_date'|translate}}</ion-label>
+        <ion-datetime [(ngModel)]="reserveData.start_date"></ion-datetime>
+      </ion-item>
+      <ion-item-divider>{{'stu_reserve_your_spot.select_time'|translate}}</ion-item-divider>
+      <ion-scroll scrollX="true" timeslot-scroll>
+        <ion-list radio-group [(ngModel)]="reserveData.time_slot">
+          <ion-row>
+            <ion-col *ngFor="let slot of time_slots">
+              <ion-item>
+                <ion-label> {{slot}} </ion-label>
+                <ion-radio value="{{slot}}" item-left></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </ion-scroll>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-textarea type="text" [(ngModel)]="reserveData.message" placeholder="{{'stu_reserve_your_spot.placeholder'|translate}}"></ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+  <ion-list>
+    <ion-item text-wrap>
+      <h2>{{'stu_reserve_your_spot.content'|translate}}</h2>
+      <p [(innerHtml)]="reserveData.content"></p>
+    </ion-item>
+    <ion-item no-lines>
+      <h2><span [(innerHtml)]="reserveData.duration_value"></span> <span [(innerHtml)]="reserveData.duration_type"></span></h2>
+      <p>{{'stu_reserve_your_spot.day_off'|translate}}: <span [(innerHtml)]="reserveData.days_off"></span></p>
+      <ion-note item-right large color="danger" [(innerHtml)]="reserveData.credits"></ion-note>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button block round color="danger" type="submit" (click)="requestTutor()">{{'stu_reserve_your_spot.request'|translate}}</button>
+  </div>
+  <!-- </form> -->
+</ion-content>

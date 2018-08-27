@@ -1,0 +1,21 @@
+page-certificates {
+	img.certificate_thumb {
+    	height: 60px !important;
+    	width: 60px !important;
+    }
+    ion-thumbnail {
+     	min-width: 0px !important;
+     	min-height: 0px !important;
+    }
+    button.cert_add_btn {
+    	position: relative;
+    	float: right;
+    	bottom: 16px;
+	}
+	ion-item.cert_card {
+        position: relative;
+        margin-bottom: -44px;
+    }
+
+}
+

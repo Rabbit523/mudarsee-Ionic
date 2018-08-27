@@ -1,0 +1,102 @@
+page-choose-file-modal {
+		ion-content {
+       &.content {
+           background: rgba(64, 68, 84, 0.5);
+           .scroll-content {
+               display: -webkit-box;
+               display: -ms-flexbox;
+               display: flex;
+               -webkit-box-align: center;
+               -ms-flex-align: center;
+               /* align-items: center; */
+               -webkit-box-pack: center;
+               -ms-flex-pack: center;
+               justify-content: center;
+               height: auto !important;
+           }
+       } 
+       [modalpopup] {
+           border-radius: 2px;
+           background: $w;
+           max-width: 300px;
+           width: 90%;
+           padding: 2em;
+           text-align: center;
+           box-shadow: $shadow_modal;
+           position: relative;
+           margin-top: 25%;
+           margin-bottom: 100%;
+           
+           [searchinput] {
+               position: relative;
+               background: $light_border;
+               border-radius: 5px;
+               padding: 5px;
+               
+               &:before {
+                   font-family: "shipper" !important;
+                   content: "";
+                   width: 54px;
+                   height: 100%;
+                   position: absolute;
+                   left: 0;
+                   top: 0;
+                   display: -webkit-box;
+                   display: -ms-flexbox;
+                   display: flex;
+                   -webkit-box-align: center;
+                   -ms-flex-align: center;
+                   align-items: center;
+                   -webkit-box-pack: center;
+                   -ms-flex-pack: center;
+                   justify-content: center;
+               }
+               input {
+                   padding-left: 54px;
+                   &#journey_from {
+                       background: none;
+                       height: 34px;
+                   }
+               }
+           }
+       }
+       h2 {
+           font-weight: 300;
+           
+           color: $alert;
+           border-bottom: 0px solid $alert;
+           margin: 0;
+           margin-bottom: .5em;
+           padding-bottom: .5em;
+       }
+       button {
+           &.button {
+               text-transform: none;
+               font-weight: 300;
+               
+               span {
+                   i {
+                       font-size: 2em;
+                       margin-right: .8rem;
+                   }
+               }
+           }
+       }
+   }
+   ion-scroll.description-scroll.scroll-y {
+    height: 18em;
+    border-style: ridge;
+    top: -18px;
+    
+}
+.close_btn{
+	position:relative;
+	float:right;
+	bottom:20px;
+	right: -28px;
+}
+.file_type{
+	position:relative;
+	top:40px;
+}
+}

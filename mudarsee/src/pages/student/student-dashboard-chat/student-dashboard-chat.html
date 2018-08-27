@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar color="primary"> 
+        <ion-title>{{'stu_dashboard_chat.title'|translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+			<ion-list>
+  				<ion-item *ngFor="let member of chat_members" (click)="openChatPage(member)">
+    				<ion-avatar item-start>
+      					<img [src]="member.imageFullUrl">
+    				</ion-avatar>
+    				<h2>{{member.username}}</h2>
+    				<ion-badge class="count_badge" color="Done">{{member.messages_count}}</ion-badge>
+   					<p>{{member.message}}</p>
+  				</ion-item>
+  		</ion-list>
+      <p padding *ngIf="chat_members.length==0">{{'stu_dashboard_chat.availabl'|translate}}</p>
+    <ion-infinite-scroll *ngIf="showLoadMore==true" (ionInfinite)="getChatTutorsList($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

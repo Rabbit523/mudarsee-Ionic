@@ -1,0 +1,91 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_lead_details.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div header-profile text-center>
+    <div class="user-img"> <img src="{{profileImage+lead_details.photo}}" alt=""> </div>
+    <div class="user-details">
+      <h3>{{lead_details.username}}</h3>
+      <p class="status">
+        <span *ngIf="lead_details.is_online=='no'">{{'stu_tutor_profile.off'|translate}}</span>
+        <span *ngIf="lead_details.is_online=='yes'">{{'stu_tutor_profile.on'|translate}}</span>
+        <span>{{lead_details.gender}}</span>
+        <span>{{lead_details.dob}}</span></p>
+      <p>
+        <ion-icon name></ion-icon>
+        <ion-icon name="pin"></ion-icon> {{lead_details.city}}</p>
+    </div>
+  </div>
+  <ion-list contact-list>
+    <ion-list-header color="light">{{'stu_tutor_profile.info'|translate}}</ion-list-header>
+    <ion-item text-wrap *ngIf="lead_details.show_contact=='All' || lead_details.show_contact=='Email'">
+      <p>{{'stu_tutor_profile.email'|translate}}</p>
+      <h4><a href="mailto:lead_details.email">{{lead_details.email}}</a></h4>
+    </ion-item>
+    <ion-item text-wrap *ngIf="lead_details.show_contact=='All' || lead_details.show_contact=='Mobile'">
+      <p>{{'stu_tutor_profile.phone_no'|translate}}</p>
+      <h4>+{{lead_details.phone_code}}<a href="tel:+lead_details.phone"> {{lead_details.phone}} </a></h4>
+    </ion-item>
+    <ion-item text-wrap *ngIf="lead_details.academic_class!='no'||lead_details.non_academic_class!='no'">
+      <p>{{'tut_lead_details.type'|translate}}</p>
+      <h4>
+                <span *ngIf="lead_details.academic_class=='yes'">{{'stu_tutor_profile.academic'|translate}}</span>
+                <span *ngIf="lead_details.non_academic_class=='yes'">{{'stu_tutor_profile.non_academic'|translate}}</span>
+            </h4>
+    </ion-item>
+    <ion-item text-wrap>
+      <p>{{'tut_lead_details.profile'|translate}}</p>
+      <p>{{lead_details.profile}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-list contact-list>
+    <ion-list-header color="light">{{'tut_lead_details.details'|translate}}</ion-list-header>
+    <ion-item text-wrap>
+      <p>{{'tut_lead_details.retitle'|translate}}</p>
+      <h4>{{requirement_details.title_of_requirement}}</h4>
+    </ion-item>
+    <ion-item text-wrap>
+      <p>{{'tut_lead_details.details'|translate}}</p>
+      <h4>{{requirement_details.requirement_details}}</h4>
+    </ion-item>
+    <ion-item text-wrap>
+      <h4>{{'tut_lead_details.course'|translate}}</h4>
+      <p>{{requirement_details.course_name}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h4>{{'tut_lead_details.location'|translate}}</h4>
+      <p>{{requirement_details.location_name}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h4>{{'tut_lead_details.teaching'|translate}}</h4>
+      <p>{{requirement_details.teaching_type}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h4>{{'tut_lead_details.status'|translate}}</h4>
+      <p>{{requirement_details.present_status}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h4>{{'tut_lead_details.priority'|translate}}</h4>
+      <p>{{requirement_details.priority_of_requirement}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h4>{{'tut_lead_details.duration'|translate}}</h4>
+      <p>{{requirement_details.duration_needed}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h4>{{'tut_lead_details.budget'|translate}}</h4>
+      <p> {{requirement_details.budget}} / {{requirement_details.budget_type}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-fab mini right bottom>
+    <button ion-fab color="primary" (click)="sendMessageModal(lead_details)">
+      <ion-icon name="mail"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
+

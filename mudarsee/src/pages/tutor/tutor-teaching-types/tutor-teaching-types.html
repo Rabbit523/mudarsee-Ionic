@@ -1,0 +1,17 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title logo>{{'tutor_exper.type'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list *ngFor="let teaching_type of teaching_types">
+    <ion-item>
+      <ion-label>{{teaching_type.teaching_type}}</ion-label>
+      <ion-checkbox color="dark" [(ngModel)]="teaching_type.checked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <button ion-button block round color="danger" (click)="updateTeachingTypes()">{{'tutor_exper.Update'|translate}}</button>
+</ion-content>

@@ -1,0 +1,62 @@
+page-stu-tutor-profile {
+    [header-profile] {
+        .user-details {
+            h3 {
+                color: $dark_c;
+            }
+            p {
+                color: $dark_c;
+                span {
+                    position: relative;
+                    &+span {
+                        margin-left: 1.6em;
+                        &:before {
+                            position: absolute;
+                            left: -.8em;
+                            top: 50%;
+                            height: 10px;
+                            margin-top: -4px;
+                            content: '';
+                            width: 1px;
+                            background: $dark_c;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+            &:before,
+            &:after {
+                background: $dark_c;
+            }
+        }
+    }
+    ion-row {
+        &[status-row] {
+            h3 {
+                margin: 0;
+                font-size: $fs_xlarge;
+                font-weight: $fst_bold;
+            }
+            p {
+                margin-top: 0;
+            }
+        }
+    }
+    .review-rating {
+        .star {
+            display: inline-block;
+            ion-icon {
+                font-size: 15px;
+            }
+        }
+        button {
+            margin: 0;
+            vertical-align: top;
+            margin-top: .3em;
+            margin-left: .5em;
+            &[small] {
+                height: 2.3em;
+            }
+        }
+    }
+}

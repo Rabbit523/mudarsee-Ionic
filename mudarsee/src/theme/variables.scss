@@ -1,0 +1,149 @@
+$font-path: "../assets/fonts";
+/* For floating button */
+@font-face {
+    font-family:DroidKufi-Bold ;
+    src: url("../assets/font/DroidKufi-Bold.ttf");
+  }
+  @font-face {
+    font-family:DroidKufi-Regular ;
+    src: url("../assets/font/DroidKufi-Regular.ttf");
+  }
+ 
+@import "ionic.globals";
+
+$colors: (
+    primary:    #54104e,
+    secondary:  #32db64,
+    danger:     #c1090d,
+    light:      #f4f4f4,
+    dark:       #222,
+    warning:( 
+        base: #ffd532, 
+        contrast: #ffffff
+    ), 
+    white:( 
+        base: #FFFFFF, 
+        contrast: #5d5e79
+    ),
+    google_plus:( 
+        base: #f86f60, 
+        contrast: #FFF
+    ),
+    stable:( 
+        base: #8e919b, 
+        contrast: #FFF
+    ),
+    facebook:( 
+        base: #4575bf, 
+        contrast: #FFF
+    ),
+    twitter:( 
+        base: rgba(104, 206, 244, 1), 
+        contrast: rgba(255, 255, 255, 1)
+    ),
+);
+$app-direction: multi;
+
+//Colors
+$w:#ffffff;
+$primary_c: #54104e;
+$secondary_c:#32db64;
+$danger_c:#bd3c3e;
+$warning_c:#ffd532;
+$w_c:#fff;
+$b_c:#000;
+$dark_c:#5d5e79;
+$dg_c:#8e919b;
+$gs_c:#cdcfcf;
+$g_c:#efefef;
+$lg_c:#f6f6f6;
+$fb:#4575bf;
+$fbover:#3d6fb8;
+$tw:#68cef4;
+$twover:#5ac7f0;
+$dark_01:rgba(0, 0, 0,.1);
+$dark_06:rgba(0, 0, 0,.6);
+$white_02:rgba(255, 255, 255,.2);
+$unread:#fdfaf1;
+$radio_ios:rgba(83, 64, 81, 0.08);
+$shadow_modal: 0px 10px 30px rgba(0,0,0,.3);
+$light_border:#f1f1f1; 
+$alert:#d96a4a;
+
+//Fonts Style
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
+
+//Font Family
+$font:'Lato', sans-serif;
+//Font Size
+$fs_xsmall:.65em;
+$fs_small:.8em;
+$fs_normal:1em;
+$fs_midium:1.2em;
+$fs_large:1.4em;
+$fs_xlarge:2em;
+//Font Style
+$fst_light:300;
+$fst_normal:400;
+$fst_italic:400i;
+$fst_bold:700;
+$fst_extra_bold:900;
+
+//Shadow
+$shadow_value:0px 5px 20px 0px;
+$shadow_card:rgba(142, 145, 155, 0.1);
+$shadow_dark:rgba(83, 64, 81, 1);
+$shadow_theme:rgba(83, 64, 81, .1);
+$shadow_dark_tra:rgba(83, 64, 81, 0);
+
+// Border Radius
+$border_radius:4px;
+
+// Gradiant
+$gradient_sidemenu_01:rgba(83, 64, 81, 1);
+$gradient_sidemenu:rgba(62, 75, 103, 1);
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

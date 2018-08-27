@@ -1,0 +1,19 @@
+<ion-header no-border>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon class="tuts-list"></ion-icon>
+        </button>
+        <ion-title>{{'setting.title'| translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-list>
+            <button ion-item detail-push (click)="openContactUs()">{{'setting.contact'| translate }}</button>
+            <button ion-item detail-push (click)="openAboutUs()">{{'setting.about'| translate }}</button>
+            <button ion-item detail-push (click)="openTermsConditions()"> {{'setting.terms'| translate }}</button>
+            <button ion-item detail-push (click)="appShare()">{{'setting.share'| translate }}</button>
+            <button ion-item detail-push (click)="logout()"> {{'setting.logout'| translate }}</button>
+        </ion-list>
+    </ion-card>
+</ion-content>

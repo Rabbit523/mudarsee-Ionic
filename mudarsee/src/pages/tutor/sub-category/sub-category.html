@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{category_name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <div *ngFor="let list of courseList" (click)="getTutors(list)">
+      <ion-item>
+        <ion-thumbnail item-left thumbnail-small>
+          <img src="{{list.image}}" alt="">
+        </ion-thumbnail>
+        <h2>{{list.name}}</h2>
+        <p>{{list.description}}</p>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

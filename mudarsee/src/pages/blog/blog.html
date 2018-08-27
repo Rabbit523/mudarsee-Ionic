@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+        <ion-title>{{'blog.title'|translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content >
+	<ion-card *ngFor="let blog of blogs" (click)="openBlogDetails(blog)">
+  		<ion-card-title>
+      			{{blog.title}}
+      	</ion-card-title>
+  		<img class="blog_image" [src]="blog.image_url"/>
+  		<ion-item>
+		    <ion-avatar item-start>
+		      <img [src]="blog.author_image_full_url">
+		    </ion-avatar>
+		    <h2 text-wrap>{{blog.author_name}} , <span class="date_span">{{blog.approved_datetime}}</span></h2>
+		</ion-item>
+  		<ion-card-content class="blog_description">
+  			<p text-wrap [innerHTML]="blog.description"></p>
+  		</ion-card-content>
+	</ion-card>
+    <p padding *ngIf="blogs.length==0">{{'blog.available'|translate}}</p>
+<ion-infinite-scroll position="top" *ngIf="showLoadMore==true" (ionInfinite)="getBlogs($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll> 
+</ion-content>

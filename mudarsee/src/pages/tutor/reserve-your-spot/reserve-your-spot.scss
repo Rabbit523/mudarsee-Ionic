@@ -1,0 +1,15 @@
+page-reserve-your-spot {
+  ion-row {
+    padding: 0;
+    ion-col {
+      padding: 0;
+    }
+  }
+  ion-list {
+    ion-item {
+      p {
+        font-size: $fs_normal;
+      }
+    }
+  }
+}

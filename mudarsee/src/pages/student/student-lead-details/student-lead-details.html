@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle></button>
+    <ion-title>{{'stu_lead_details.title'|translate}}</ion-title>
+    <ion-buttons end>
+      <button (click)="updateLeadStatus()" ion-button icon-only>
+        <ion-icon name="md-create"></ion-icon> 
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+ <ion-list contact-list>
+  <ion-item text-wrap> <p> {{'stu_lead_details.loc'|translate}}</p> <h4>{{lead.location_name}} </h4> </ion-item>
+  <ion-item text-wrap> <p> {{'stu_lead_details.name'|translate}}</p> <h4>{{lead.course_name}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.type'|translate}} </p> <h4>{{lead.teaching_type}}</h4> </ion-item> 
+  <ion-item text-wrap> <p>{{'stu_lead_details.pres_status'|translate}}</p> <h4>{{lead.present_status}}</h4> </ion-item> 
+  <ion-item text-wrap> <p> {{'stu_lead_details.priority'|translate}}</p> <h4>{{lead.priority_of_requirement}}</h4> </ion-item> 
+  <ion-item text-wrap> <p>{{'stu_lead_details.duration'|translate}}</p> <h4>{{lead.duration_needed}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.budget'|translate}}</p> <h4>{{lead.budget}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.budget_type'|translate}}</p> <h4>{{lead.budget_type}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.title_of_requirement'|translate}}</p> <h4>{{lead.title_of_requirement}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.details'|translate}}</p> <h4>{{lead.requirement_details}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.views'|translate}}</p> <h4>{{lead.no_of_views}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.status'|translate}}</p> <h4>{{lead.status}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.created'|translate}}</p> <h4>{{lead.created_at}}</h4> </ion-item>
+  <ion-item text-wrap> <p>{{'stu_lead_details.updated'|translate}}</p> <h4>{{lead.updated_at}}</h4> </ion-item>
+</ion-list>
+</ion-content>

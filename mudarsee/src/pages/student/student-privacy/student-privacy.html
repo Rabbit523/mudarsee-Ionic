@@ -1,0 +1,48 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_privacy.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="privacyForm" novalidate (ngSubmit)="(privacyForm.valid && submitted) && updatePrivacySettings()">
+    <ion-list contact-list>
+      <ion-item>
+        <ion-label>{{'stu_privacy.dem'|translate}}</ion-label>
+        <ion-select formControlName="freeDemo" [(ngModel)]="userData.free_demo">
+          <ion-option>{{'stu_privacy.yes'|translate}}</ion-option>
+          <ion-option>{{'stu_privacy.no'|translate}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!privacyForm.controls.freeDemo.pristine || submitted" [name]="(!privacyForm.controls.freeDemo.valid && (privacyForm.controls.freeDemo.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!privacyForm.controls.freeDemo.valid && (privacyForm.controls.freeDemo.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'stu_privacy.search'|translate}}</ion-label>
+        <ion-select formControlName="visibilityInSearch" [(ngModel)]="userData.visibility_in_search">
+          <ion-option value="1">{{'stu_privacy.yes'|translate}}</ion-option>
+          <ion-option value="0">{{'stu_privacy.no'|translate}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'stu_privacy.privacy'|translate}}</ion-label>
+        <ion-select formControlName="showContact" [(ngModel)]="userData.show_contact">
+          <ion-option value="All">{{'stu_privacy.all'|translate}}</ion-option>
+          <ion-option value="Email">{{'stu_privacy.email'|translate}}</ion-option>
+          <ion-option value="Mobile">{{'stu_privacy.mobile'|translate}}</ion-option>
+          <ion-option value="None">{{'stu_privacy.none'|translate}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!privacyForm.controls.showContact.pristine || submitted" [name]="(!privacyForm.controls.showContact.valid && (privacyForm.controls.showContact.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!privacyForm.controls.showContact.valid && (privacyForm.controls.showContact.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{'stu_privacy.availability'|translate}}</ion-label>
+        <ion-select formControlName="availabilityStatus" [(ngModel)]="userData.availability_status">
+          <ion-option value="1">{{'stu_privacy.title'|translate}}</ion-option>
+          <ion-option value="0">{{'stu_privacy.no'|translate}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!privacyForm.controls.availabilityStatus.pristine || submitted" [name]="(!privacyForm.controls.availabilityStatus.valid && (privacyForm.controls.availabilityStatus.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!privacyForm.controls.availabilityStatus.valid && (privacyForm.controls.availabilityStatus.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+    <button ion-button block round color="danger" type="submit" (click)="submitted=true">{{'stu_privacy.submit'|translate}}</button>
+  </form>
+</ion-content>

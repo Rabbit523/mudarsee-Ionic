@@ -1,0 +1,26 @@
+page-settings {
+    ion-list {
+        &.list {
+            .item {
+                &+.item {
+                    .item-inner {
+                        border-top: 1px solid $g_c !important;
+                    }
+                }
+                &:last-child {
+                    border: none;
+                }
+                &:first-child {
+                    border: none;
+                }
+                .item-inner {
+                    .input-wrapper {
+                        ion-label{
+                            margin: 13px 8px 13px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

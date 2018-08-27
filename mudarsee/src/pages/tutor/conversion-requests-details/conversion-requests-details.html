@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{'conversion_request_details.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item text-wrap>
+      <h2>{{'conversion_request_details.id'|translate}}</h2>
+      <p item-right>{{conversionDetails.booking_id}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{'conversion_request_details.paypal'|translate}}</h2>
+      <p>{{conversionDetails.user_paypal_email}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{'conversion_request_details.ac'|translate}}</h2>
+      <p>{{conversionDetails.user_bank_ac_details}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2 item-left>{{'conversion_request_details.converted'|translate}}</h2>
+      <p item-right>{{conversionDetails.no_of_credits_to_be_converted}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2 item-left>{{'conversion_request_details.admin'|translate}} </h2>
+      <p item-right>{{conversionDetails.admin_commission_val}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2 item-left>{{'conversion_request_details.per'|translate}}</h2>
+      <p item-right>{{conversionDetails.per_credit_cost}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2 item-left>{{'conversion_request_details.total'|translate}}</h2>
+      <p item-right>{{conversionDetails.total_amount}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{'conversion_request_details.status'|translate}}</h2>
+      <p color="danger" item-right>{{conversionDetails.status_of_payment}}</p>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{'conversion_request_details.updated'|translate}}</h2>
+      <p>{{conversionDetails.created_at}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

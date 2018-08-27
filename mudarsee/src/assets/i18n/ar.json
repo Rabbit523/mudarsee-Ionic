@@ -1,0 +1,1103 @@
+{
+	"general": {
+		"error_first": {
+			"message": "يرجي التحقق إذا كان الهاتف المحمول متصلا بالأنترنت",
+			"button": "موافق"
+		},
+		"login_expired": {
+			"message": "أنتهت صلاحيه الدخول",
+			"button": "موافق"
+		},
+		"disconnect": "غير متصل بالانترنت",
+		"no_data": "لا توجد منتجات",
+		"to_price": " - ",
+		"username": "أسم المستخدم *",
+		"email": "البريد الالكتروني *",
+		"first_name": "الأسم الأول *",
+		"last_name": "الأسم الأخير *",
+		"password": "كلمه المرور *",
+		"reset": "إعاده التعيين",
+		"need_login": "يرجي تسجيل الدخول",
+		"login": "تسجيل ",
+		"pullingIcon": "ios-refresh-outline",
+		"pullToRefresh": "",
+		"refreshingSpinner": "circles",
+		"refreshing": "",
+		"timeAgo": {
+			"minute": " منذ دقيقه",
+			"minutes": "منذ دقائق",
+			"hour": " منذ ساعه",
+			"hours": " منذ سلعات",
+			"day": "منذ يوم",
+			"days": " منذ ايام"
+		},
+		"has_error": "  لقد حدث خطأ , حاول مره آخرى لاحقا",
+		"cancel": "الغاء",
+		"ok": "موافق",
+		"copyright": "© 2017 Copyright. All rights reserved."
+	},
+	"tabs": {
+		"home": "الرئيسيه",
+		"categories": "الفئات",
+		"search": "بحث",
+		"account": "حسابي"
+	},
+	"home": {
+		"deal": "عرض اليوم",
+		"sale": "خصم",
+		"latest": "وصلنا حديثا",
+		"all": "الكل",
+		"viewAll": "عرض المزيد",
+		"categories": "فئاتنا",
+		"no_categories": "لا توجد فئات",
+		"whatClientSay": "  ماذا يقول عملائنا",
+		"newsletter": "الرسائل",
+		"newsletterInput": "يرجى أدخال البريد الألكتروني",
+		"services": [
+			{
+				"title": " الأرجاع خلال 7 أيام مجاني  ",
+				"icon": "icon-reply",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			},
+			{
+				"title": "100% معتمد",
+				"icon": "icon-check",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			},
+			{
+				"title": "أستبدال مدى الحياه",
+				"icon": "icon-reload",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			},
+			{
+				"title": "الدعم 24/24",
+				"icon": "icon-phone",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			}
+		]
+	},
+	"categories": {
+		"title": "الفئات",
+		"no_data": "لا توجد فئات",
+		"category": "قسم",
+		"filter": "فلتر",
+		"sort": "ترتيب",
+		"sold": "تم البيع : ",
+		"done": "تم",
+		"price_range": "نطاق السعر ",
+		"sortData": [
+			{
+				"text": "الوقت: الاحدث",
+				"value": "-date_created_gmt"
+			},
+			{
+				"text": "السعر:الأقل أولا",
+				"value": "price"
+			},
+			{
+				"text": "السعر:الأعلى أولا",
+				"value": "-price"
+			},
+			{
+				"text": "أسم المنتج: أ إلي ي",
+				"value": "name"
+			},
+			{
+				"text": "أسم المنتج: ي إلي أ",
+				"value": "-name"
+			}
+		]
+	},
+	"search": {
+		"title": "بحث عن منتجات",
+		"no_result": "لا يوجد",
+		"sold": "تم البيع : "
+	},
+	"account": {
+		"login": "تسجيل",
+		"signout": {
+			"title": "موديرن شوب",
+			"message": "هل تريد الخروج ؟",
+			"no": "إلغاء",
+			"yes": "موافق"
+		},
+		"my_order": "طلباتي",
+		"favorite": "المفضل",
+		"push_notification": "الاخطارات",
+		"text_size": {
+			"title": "حجم الخط",
+			"option": {
+				"small": "صغير",
+				"normal": "عادي",
+				"large": "كبير",
+				"extra_large": "كبير جدا"
+			},
+			"cancel": "إلغاء"
+		},
+
+		"Language": {
+			"title": "اللغه",
+			"option": {
+				"ar": "العربيه",
+				"en": "English"
+			},
+			"cancel": "إلغاء"
+		},
+		"app_share": "مشاركة التطبيق ",
+		"rate_us": "تقييم",
+		"terms_of_use": "شروط الأستخدام",
+		"privacy_policy": "سياسة الخصوصية",
+		"contact_us": "أتصل بنا",
+		"about_us": "من نحن",
+		"version": "نسخه 1.0.3"
+	},
+	"login": {
+		"title": "تسجيل ",
+		"forgot_password": "نسيت كلمه المرور ؟",
+		"signupText": "لست عضوا حتى الآن ؟ ",
+		"signup": "سجل الأن",
+		"wrong": "أسم المستخدم او كلمه المرور غير صحيحه",
+		"forgot_title": "نسيت كلمه المرور ؟",
+		"forgot_body": "من أجل أستلام  إعادة الضبط عن طريق البريد الألكتروني، يرجى إدخال اسم المستخدم الذي أدخلته أثناء عملية التسجيل.",
+		"forgot_placeholder": "اسم المستخدم",
+		"email_placeholder": "البريد الالكتروني",
+		"Password_placeholder":" كلمه المرور",
+		"forgot_send": "أرسال",
+		"forgot_success": "لقد تم أرسال الرابط بنجاح",
+		"or":"أو"
+	},
+	"signup": {
+		"title": "سجل الأن",
+		"confirm_password": "تاكيد كلمه المرور ",
+		"login": "هل لديك حساب ؟ ",
+		"success": "تم التسجيل الان",
+		"As":"سجل ك",
+		"select":"قم بأختيار مجموعه",
+		"Student":"تلميذ",
+		"Tutor":"مدرس",
+		"First_Name":"الأسم الأول",
+		"Last_Name":"الأسم الأخير",
+		"Email":"البريد الالكتروني",
+		"Code":"كود التلفون",
+		"Phone":"رقم الموبايل",
+		"Pin":"البن كود",
+		"Password":"كلمه المرور",
+		"Sign":"تسجيل",
+		"Sign_In":"تسجيل",
+		"Submit":"أرسال",
+		"reset":"قم بادخال بريدك الألكتروني حتي نتمكن من ارسال كلمه المرور عليه",
+		"forgot_pass":"نسيت كلمه المرور"
+	},
+	"cart": {
+		"header":"الاجمالي",
+		"title": "حقيبه التسوق",
+		"empty": "أنت لا تحب أن تكون فارغه",
+		"shop": "تسوق الآن !",
+		"qty": "الكميه :",
+		"have_coupon": "هل لديك كوبون ؟",
+		"coupon_here": "كودالكوبون هنا ",
+		"apply": "أطلب",
+		"add": "لقد تم طلب كود الكوبون بنجاح",
+		"remove": "تم ألغاء الكوبون",
+		"coupon_invalid": "كود الكوبون غير صحيح",
+		"already_applied": "تم أستخدام كود الكوبون من قبل ",
+		"discount": "تلقيت خصم",
+		"totals": "المبلغ الكلي",
+		"total_price": "السعر الكلي :",
+		"tax": "الضريبه :",
+		"coupon_code": "كوبون",
+		"order_total": "إجمالي الطلب",
+		"checkout": "الدفع",
+		"confirm": {
+			"message": "أنت غير مسجل .إذا أستمريت ستدفع كضيف. هل تريد تسجيل الدخول لإدارة طلبك؟",
+			"yes": "نعم",
+			"no": "لا"
+		},
+		"validate": "موافق"
+	},
+	"detail": {
+		"title": "التفاصيل",
+		"rating": "التقييم",
+		"review": "التعليق",
+		"addToCart": "إضافه الي حقيبة التسوق",
+		"color": "اللون",
+		"size": "الحجم",
+		"quantity": "الكميه :",
+		"price": "إجمالي السعر :",
+		"buyer_protection": "حماية المستهلك",
+        "buyer_protection_text": "يتم أعاده المنتج  إذا كان غير مطابق للمواصفات .البائع يدفع إعادة الشحن أو الاحتفاظ بالمنتج وتوصيل رد مع البائع",
+        "about_this_item": "حول هذا المنتج",
+		"sku": "SKU",
+		"available": "متاح",
+		"item_description": "المواصفات",
+		"view_more": "عرض المزيد",
+		"view_less": "عرض اقل",
+		"buy_the_look": "ماذا عن هذه",
+		"favorite": {
+			"add": "تم إضافته بنجاح إلى قائمة المفضلات",
+			"remove": "تم حذفه بنجاح إلى قائمة المفضلات"
+		},
+		"out_of_quantity": "الكميه المتاحه في المخزن ",
+		"individually": {
+			"before": "لا يمكنك إضافة آخر ",
+			"after": "إلى حقيبه الشراء."
+		},
+		"add": "تم الأضافه بنجاح",
+		"addOut": "تم الأضافه بنجاح , قد يتم تاخير الطلب",
+		"outStock": "غير متاح في المخزن",
+		"grouped": {
+			"variable": "أختر >",
+			"button": "موافق"
+		},
+		"have_not_variation": "لم تقم باختيار شيئ",
+		"height": "الارتقاع",
+		"length": "الطول",
+		"width": "العرض"
+	},
+	"comments": {
+		"title": "التعليقات",
+		"ratings_reviews": "التقييمات والتعليقات",
+		"rating": "التقييم",
+		"button": "قيم واكتب تعليقك"
+	},
+	"rating": {
+		"title": "أكتب تعليق",
+		"comment_about": "تعليق عن هذا المنتج",
+		"your_rating": "تقييمك",
+		"name": "الأسم",
+		"email": "البريد الالتروني",
+		"comment": "وصف التعليقات ...",
+		"post": "أضف تعليق",
+		"fail": "هذه المنتجات غير مسموح التعليق عليها"
+	},
+	"order": {
+		"title": "طلباتي",
+		"empty": "لايوجد لديك طلبات",
+		"shop": "إلي التسوق ",
+		"id": "رمز القطعه",
+		"date": "التاريخ ",
+		"quantity": "الكميه:",
+		"item": "عنصر",
+		"items": "عناصر",
+		"ordered_by": "ترتيب ",
+		"total": "إجمالي الكميه",
+		"details": "التفاصيل"
+	},
+	"detailOrder": {
+		"title": "رمز الطلب :#",
+		"order_status": " حالة الطلب ",
+		"address": "العنوان",
+		"change": "تغيير",
+		"delivery_address": "عنوان التسليم ",
+		"billing_address": "عنوان إرسال الفواتير ",
+		"shipping_method": "طريقة الشحن",
+		"order_detail": "تفاصيل الطلب",
+		"items": "عناصر",
+		"totals": "الأجمالي",
+		"total_price": "السعر الكلي",
+		"shipping": "الشحن:",
+		"tax": "الضريبه:",
+		"coupon_code": "كود الكوبون",
+		"order_total": "كل الطلبات",
+		"payment_method": "طرقه الدفع",
+		"free": "مجاني",
+		"cancel_order": "إلغاء الطلب",
+		"popup_cancel": {
+			"message": "هل تريد بالتأكيد إلغاء هذا الطلب؟",
+			"no": "لا",
+			"yes": "موافق",
+			"success": "تم تغيير حالة الطلب إلى الملغاة",
+			"fail": "فشل تغيير حاله الطلب"
+		}
+	},
+	"favorite": {
+		"title": "قائمه المفضلات",
+		"clear": {
+			"title": "حذف",
+			"message": "هل تريد حذف كل المفضل",
+			"no": "لا",
+			"yes": "نعم"
+		},
+		"empty": "أنت لا تحب أن تكون فارغه",
+		"shop": "تسوق الأن "
+	},
+	"terms": {
+		"title": "تعليمات الأستخدام",
+		"intoduction": "مقدمه",
+		"first": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+		"content": [
+			"1.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+			"2.  Nemo enim ipsam voluptatem quia voluptas sit aspernatur"
+		]
+	},
+	"privacy": {
+		"title": "سياسة الخصوصية",
+		"first": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+		"content": [
+			{
+				"title": "1. What is a standardised",
+				"text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"
+			}
+		]
+	},
+	"contact": {
+		"title": "أتصل بنا",
+		"about": "من نحن",
+		"first_name":"الأسم الأول",
+		"last_name":"الأسم الثاني",
+		"send_a_message": "أرسل رساله",
+		"name": "الأسم",
+		"email": "البريد الألكتروني",
+		"subject": "الموضوع",
+		"message": "الرساله",
+		"send": "أرسال",
+		"success": "لقد تم أرسال رسالتك",
+		"error": "لقد حدث خطأ برجاء المحاوله مره أخرى"
+	},
+	"setting":{
+		"title":"الأعدادات",
+		"about":"من نحن",
+		"contact":"أتصل بنا",
+		"terms":"الشروط والأحكام",
+		"share":"مشاركه مع الأصدقاء",
+		"logout":"خروج",
+		"new_terms":"الشروط والأحكام"
+
+	},
+	"contact_details":{
+		"title":"تحديث بيانات المستخدم",
+		"city":"المدينه",
+		"landmark":"الموقع",
+		"country":"البرد",
+		"pin":"كود الهاتف",
+		"phone":"الموبايل",
+		"classes":"نوع الصف",
+		"academic":"أكاديمي",
+		"no_academic":"غير أكاديمي",
+		"subtitle":"بيانات المدرس",
+		"submit":"أرسال"
+
+		},
+		"credit_trans_history":{
+			"title":"تاريخ المعامله الأتمانيه",
+			"filter":"فلتر",
+			"all":"الكل",
+			"credited":"المقيده",
+			"debited":"الخصم"
+
+
+
+			},
+			"find_tutor":{
+				"title":"مدرسين",
+				"demo":"عرض تجريبي مجاني",
+				"exprience":"خبره ",
+				"qualification":"كفاءه",
+				"tutors":"لا يوجد مدرسون متاحون"
+
+			},
+			"my_address":{
+				"title":"عنواني",
+				"net":"صافي القروض",
+				"address":"العنوان ",
+				"info":"بيانات المستخدم",
+				"mobile":"موبايل",
+				"email":"البريد الألكتروني",
+				"per":"لكل قيمه الاتمان"
+
+			},
+			"my_course_purchases":{
+				"title":"مشتريات الدورة التدريبية",
+				"name":"أسم المدرس",
+				"purchases":"تاريخ الشراء",
+				"max":"أقصي تحميل",
+				"total": "إجمالي التنزيلات"
+
+
+
+			},
+			"stu_chat":{
+				"placeholder":"اكتب رسالة ..."
+			},
+
+			"stu_fav_tutors":{
+				"title":"المدرسين المفضلين",
+				  "sub_title":"المدرسين",
+				"demo":"عرض تجريبي مجاني",
+				"exprience":"خبره ",
+				"qualification":"كفاءه"
+
+			},
+			"stu_question_answer":{
+				  "title":"الأسئله",
+				"available":"لا يوجد أسئله",
+				"placeholder":"أكتب سؤالك هنا",
+				"conversation":"المحادثه",
+				"available_ans":"لا توجد أجابات",
+			    "mess":"أكتب رسالتك ..."
+
+			},
+			"stu_reserve_your_spot":{
+				"title":"أحجز مكانك",
+				"select":"أختر كورس",
+				"location":"حدد الموقع المفضل",
+				"home":"المنزل",
+				"online":"اون لين",
+				"select_loc":"أختر الموقع",
+				"select_date":"اختر التاريخ",
+				"select_time":"اختر الوقت",
+				"placeholder":"مرحبا اسمي  أحمد",
+				"content":"محتوي الكورس",
+				"day_off":"أيام العطله",
+				"request":"أضافه المدرس"
+			},
+			"stu_send_message":{
+				"title":"أرسل لي رسالتك",
+				"select":"أختر الدوره التدريبيه",
+				"name":"الأسم",
+				"phone_no":"رقم الموبايل",
+				"email":"البريد الألكتروني",
+				"message":"رسالتي تكون....",
+				"info":"لن نبيع أو نؤجر معلوماتك الخاصة مطلقًا",
+				"red_mes":"الرصيد مطلوبة لإرسال الرسالة",
+				"send":"أرسال الرساله"
+
+			},
+			"stu_tutor_profile":{
+				"title":"حساب المدرس",
+				"off":"غير متاح الان",
+				"on":"متاح الان",
+				"reviews":"التعليقات",
+				"info":"المعلومات الشخصية",
+				"email":"البريد الألكتروني",
+				"phone_no":"رقم الموبايل",
+				"experience":"الخبره",
+				"qualification":"الكفاءه",
+				"lang":"لغه التدريس",
+				"class":"أنواع الصفوف",
+				"academic":"أكاديمي",
+				"non_academic":"غير أكاديمب",
+				"more":"المزيد عني",
+				"courses":"دوره تعليميه",
+				"location":"مكان التدريس",
+				"career":"الخبره المهنيه",
+				"my_experience":"خبرتي",
+				"request":"أطلب المدرس"
+
+			},
+			"stu_booking_details":{
+				"title":"تفاصيل الحجز",
+				"content":"المحتوي",
+				"value":"قيمه الدوره",
+				"type":"نوع الدورهe",
+				"fee":"الرسوم (في الاعتمادات)",
+				"per":"لكل قيمه الأتمان()",
+				"preferred":"تاريخ البدء المفضل" ,
+				"date":"تاريخ الأنتهاء",
+				"time":"موعدها",
+				"day_off":"أيام الاجازه",
+				"location":"المكان المفضل",
+				"message":"الرسائل",
+				"admin":"النسبة المئوية للجنة الإدارية (في الائتمانات) (باستخدام أرصدة)",
+				"prev":"الحالة السابقة",
+				"booking":" حاله الحجز",
+				"desc":"رقم الحالة",
+				"created":"أنشئت في",
+				"updated":"تم التحديث في",
+				"cont_title":"تفاصيل الدوره ",
+			"course":"حاله الدوره",
+			"sub_title":"دورات المعلم"
+
+			},
+			"stu_booking":{
+				"title":"حجوزات",
+				"filter":"فلتر",
+				"all":"الكل",
+				"pending":"في الانتظار",
+				"approve":"مقبول",
+				"session":"بدء الجلسه",
+				"run":"يعمل الان",
+				"complete":"مكتمل",
+				"admin":"   دعا لتدخل الادارة",
+				"close":"مغلق",
+				 "claim":"مطالبة للتدخل الإداري",
+				"available":"لا توجد حجوزات متاحه"
+
+			},
+			"stu_courses":{
+				"title":"الدورات",
+				"update":"تحديث"
+
+
+			},
+			"stu_dashboard":{
+				"title":"الرئيسيه",
+				"net":"صافي الحساب",
+				"total":"أجمالي الحجوزات",
+				"pending":"حجوزات معلقه",
+			    "completed":"حجوزات مكتمله",
+			    "approved":"حجوزات معتمده",
+			    "leads":"العروض",
+				"answer":"الأجابات",
+				"messages":"الرسائل",
+				 "questions":"الأسئله",
+      "run":"حجوزات جاريه",
+      "courses":"أجمالي دورات التدريس"
+
+			},
+			"stu_dashboard_chat":{
+				"title":"الرسائل",
+				"availabl":"لا توجد رسائل متاحه",
+				"anwser":"الأجابات",
+				"ans_available":"لا توجد أجابات متاحه"
+
+			},
+			"stu_lead_details":{
+				"title":"تفاصيل العرض",
+				"loc":"الموقع",
+				"name":" أسم الدوره التدريبيه",
+				"type":"نوع التدريس",
+			  "pres_status":"الحاله الحاليه",
+			  "priority":"الاولويه للمتطلبات",
+			  "duration":"المده",
+			  "budget":"الميزانيه",
+			  "budget_type":"نوع الميزانيه",
+			  "title_of_requirement":"عنوان الشروط المطلوبه",
+			  "details":"تفاصيل المتطلبات",
+			  "views":"عدد المشاهدات",
+				"status":"الحاله",
+				"created":"أنشئت في",
+			  "updated":"تم التحديث في",
+			  "sub_title":"عروض",
+			  "available":"لا توجد عروض متاحه",
+		"filter":"فلتر",
+		"all":"الكل",
+		"open":"مفتوح",
+		"close":"مغلق",
+		"course":"دوره"
+			},
+			"stu_location":{
+				"title":"المواقع",
+				"update":"تحديث"
+
+			},
+			"stu_past_lead":{
+				"title":"أضافه عروض",
+			  "loc":"الاماكن المفضله",
+			   "course":"بحث عن دوره",
+				"perferred":"نوع التعليم المفضل",
+				"priority":"الأولويه للمتطلبات",
+				"immediately":"حالا",
+				"week":"بعد أسبوع",
+			   "month":"بعد شهر",
+			   "pre_status":"حالتك الحاليه",
+				"duration":"المدة اللازمة لإكمال الدورة التدريبية",
+				"pay":"الاعتمادات التي يمكنك دفعها",
+				"payment":"طريقه الدفع",
+				"time":"مره واحده",
+				"hour":"بالساعه",
+				"monthly":"شهري",
+			  "required":"عنوان المتطلبات",
+			  "details":"تفاصيل المتطلبات",
+			  "duration_pla":"مثل 15 يوم او شهرين",
+			  "pre_status_pla":"مثل موظف او طالب",
+			  "pay_pla":"Credits",
+			  "submit":"حفظ"
+
+			},
+			"stu_privacy":{
+				"title":"إدارة الخصوصية",
+				"demo":"عرض تجريبي مجاني",
+				"yes":"نعم",
+				"no":"لا",
+				"search":"الرؤيه في البحث",
+		   	  "privacy":"تعيين الخصوصيه",
+			  "all":"أظهار الكل",
+				"email":"أظهار البريد الألكترنوني",
+				"mobile":"أظهار الموبايل",
+				"none":"عدم أظهار شيء",
+				"availability":"توفر",
+				"submit":"حفظ"
+
+			},
+			"stu_profile":{
+
+  "paypal":"البريد الألكترنوني لباي بال",
+  "bank":"تفاصيل الحساب المصرفي",
+				"title":"حسابي",
+				"net":"صافي الحساب",
+				"per":"لكل قيمة الائتمان",
+				"info":"البيانات الشخصيه",
+				"first":"الأسم الأول",
+			  "last":"الأسم الثاني",
+			  "email":"البريد الألكتروني",
+				"date":"تاريخ الميلاد",
+				"gender":"النوع",
+				"male":"ذكر",
+				"female":"أنثى",
+			  "lang":"لغه التدريس",
+			  "blog":"مدونه/موقع",
+				"facebook":"حساب الفيسبوك",
+				"twitter":"حساب تويتر",
+				"linkedin":"حساب لينكدان",
+				"skype":"حساب اسكيب",
+				"pro":"معلومات حسابي",
+        	"desc":"وصف حسابي",
+	       "seo":"Meta SEO Keywords",
+	        "meta":"Meta وصف",
+	        "page":"عنوان صفحه الملف الشخصي",
+             "qualification":"المؤهل العلمي",
+             "far":"إلى أي مدى أنت على استعداد للسفر؟ في كم",
+              "travel":"هل تملك سيارتك الخاصة للسفر؟",
+               "yes":"نعم",
+               "no":"لا",
+
+      "sub_title":"معلومات حسابي",
+      "duration":"مده الخبره",
+      "mon":"شهري",
+      "year":"سنوي",
+      "teaching":"خبره التدريس",
+      "services":"تكلم عن خبرتك وخدماتك",
+			  "submit":"حفظ"
+
+			},
+			"stu_teaching_types":{
+				"teaching":"أنواع التدريس المفضلة",
+				"filter":"فلتر",
+				"course":"الدوره التدريبيه",
+				"loct":"الموقع",
+				"type":"نوع التدريس",
+				"review":"التعليقات",
+				"per":"أزهار عمر",
+				"submit":"حفظ",
+				"title":"إكسبلورر - إثراء - إكسل",
+				"desc1":"كل ما تحتاجه من أجل العثور على الحق",
+				"desc2":"الدرجة بالنسبة لك",
+				"btnsearch":"ابحث عن مدرسك",
+				"yes":"نعم فعلا",
+				"no":"لا"
+			},
+				"add_tutor_exp":{
+	   "title":"أضافه خبره",
+	   "company":"الشركه",
+    	"role":"القواعد",
+       "desc":"وصف",
+	   "from":"من",
+    	"to":"إلي",
+     	"save":"حفظ"
+
+
+},
+"conversion_request":{
+	"title":"طلب محادثه",
+	"type":"نوع المحادثه",
+	"all":"الكل",
+	"pending":"قيد الانتظار",
+	"done":"تم"
+
+},
+	"course_cat":{
+			"title":"تصنيف الدورات التدريبية",
+			"course":"دورات تدريبيه",
+			"cor_avail":"لا توجد دورات متاحه",
+			"Available":"لا توجد تصنيفات للدورات متاحه "
+
+		},
+		"conversion_history":{
+	"title":"تاريخ المحادثه",
+	"bank":"رمز المصرف",
+	"Pending":"قيد الانتظار",
+	"domestic":"رقم حساب محلي",
+	"IBAN":"IBAN"
+},
+"conversion_request_details":{
+	"title":"تفاصيل المحادثه",
+	"id":"رقم الحجز",
+	"paypal":"البريد الألكترنوني لمستخد باي بال",
+	"ac":" تفاصيل الحساب المصرفي للمستخدم",
+	"converted":"لا توجد ارصده ليتم تحويلها",
+	"admin":"عموله القبول",
+	  "per":"تكلفه الأتمان",
+  	"total":"أجمالي المبلغ",
+    "status":"حاله الدفع",
+  	"updated":"تم التحديث في"
+
+},
+"tut_lead_details":{
+	"type":"نوع الطالب",
+	"profile":"الحساب الشخصي",
+	"retitle":"عنوان المتطلبات",
+	"details":"تفاصيل المتطلبات",
+	"course":"بحث عن دوره",
+	"location":"الموقع المفضله",
+  "teaching":"نوع التعليم المفضل",
+	"status":"حاله الطالب الحاليه",
+  "priority":"اولويات المتطلبات",
+  "duration":"المده المطلوبه",
+  "budget":"ميزانيه"
+},
+"add_courses":{
+	"name":"أسم الدوره التدريبيه",
+	"type":"نوع المدة",
+	"hr":"بالساعات",
+	"days":"بالايام",
+	"months":"بالشهور",
+	"year":"بالسنين",
+  "value":"قيمه الده",
+  "fee":"الرسوم (في الاعتمادات)",
+  "content":"المحوي",
+  "time":"الوقت المستغرق",
+  "day_off":"الأجازات",
+  "sun":"الأحد",
+  "mon":"الأثنين",
+  "tue":"الثلاثاء",
+  "wed":"الأربعاء",
+  "thu":"الخميس",
+  "fri":"الجمعه",
+  "sat":"السبت",
+  "order":"رتب الطلب",
+  "Cancel":"ألغاء"
+},
+"tutor_exper":{
+	"title":"الخبره",
+	"location":"أماكن المدرسين",
+	"Update":"تحديث",
+  "type":"أنواع تدريس المعلم"
+
+
+},
+"studentMenu":
+{
+
+     "title_Dashboard": "الرئيسيه",
+     "title_booking": "الحجوزات",
+     "title_lead": "العروض",
+     "title_purchase": "فواتير الدورات التدريبيه",
+     "title_credit": "تاريخ المعاملات",
+     "title_manag": "أداره",
+	 "title_course":"الدورات",
+	 "title_cert":"شهادات",
+	 "title_locat":"الأماكن",
+	 "title_type":"أنواع التعليم المفضله",
+	 "title_privacy":"خصوصيه",
+     "title_acount": "حسابي",
+	 "title_pers":"بيانلتي الشخصيه",
+	 "title_prof":"بيانات حسابي",
+	"title_addres":"عناويني",
+	"title_pass":"تغيير كلمه المرور",
+    "title_tutor":"المدرسين المفضبين",
+    "title_blog":"مدونات",
+    "title_fin":"بحث عن مدرس",
+    "title_set": "الأعدادات"
+
+  },
+  "tutorMenu":
+  {
+	"title_Dashboard": "الرئيسيه",
+	"title_booking": "الحجوزات",
+	"title_lead": "العروض",
+	"title_credit": "تاريخ المعاملات",
+	   "title_conv": "طلب تحويل الرصيد",
+	   "title_manag": "أداره",
+	   "title_course":"الدورات",
+	   "title_cert":"شهادات",
+	   "title_locat":"الأماكن",
+	   "title_type":"نوع التدريس",
+	   "title_privacy":"خصوصيه",
+	   "title_acount": "حسابي",
+	   "title_pers":"بياناتي الشخصيه",
+	   "title_prof":"بيانات حسابي",
+	  "title_addres":"عناويني",
+	   "title_exp":"الخبره",
+	   "title_info":"بيانات المتصل",
+	   "title_cat":"تصنيف الدورات",
+	  "title_pass":"تغيير كلمه المرور",
+	  "title_blog":"مدونات",
+	  "title_set": "الأعدادات"
+
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"about": {
+		"title": "من نحن",
+		"welcome": "مرحبا بك في موديرن شوب",
+		"content": [
+			"Lorem ipsum dolor sit amet, ei pertinax perpetua intellegat duo. Quo te mediocrem salutandscripserit..",
+			"Forensibus, mel ne sonet virtute pertinacia. Mazim malorum probatus pro ex.Discere appete voluptatibus duo te, ne ocurreret appellantur eos.ad qui, pro probo tollit recusabo at. Accusata disputati oni ea nec.",
+			"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+		],
+		"contact": "أتصل بنا"
+	},
+	"certificate":{
+		"title":"تحميل الشهادات",
+		"upload":"تحميل الشهادات هنا"
+
+
+	},
+
+	"blog":{
+		"title":"المدونات",
+		"available":"لا توجد مدونات متاحة"
+	},
+	"chang_pass":{
+		"title":"تغيير كلمه المرور",
+		"current_pass":"كلمه المرور الحاليه",
+		"new_pass":"كلمه المرور الجديده",
+		"confirm_pass":"تأكيد كلمه المرور",
+		"Submit":"أرسال"
+
+	},
+	"profile": {
+		"title": "تعديل حسابي",
+		"edit": "تعديل",
+		"current_password": "كلمه المرور الحاليه",
+		"new_password": "كلمه المرور ",
+		"done": "تم",
+		"update_successfully": "تم التحديث بنجاح"
+	},
+	"address": {
+		"title": "العنوان",
+		"your_billing": "عنوان إرسال الفواتير",
+		"company": "شركه",
+		"address_1": " العنوان 1 *",
+		"address_2": " العنوان 2 *",
+		"city": " المدينه *",
+		"country": "الدوله*",
+		"states": " المركز *",
+		"zip": " رقم المنطقة /الرمز البريدي *",
+		"phone":"الموبايل *",
+		"email": " البريد الالكتروني *",
+		"confirm": "تأكيد",
+		"your_delivery": "عنوان التسليم",
+        "use_billing": "أستخدم التوصيل كعنوان أرسال الفواتير"
+
+	},
+	"checkout": {
+		"title": "الدفع",
+		"address": "العنوان",
+		"change": "تغيير",
+		"delivery_address": "عنوان التسليم",
+		"billing_address": "عنوان إرسال الفواتير",
+		"shipping_method": "طريقه الشحن",
+		"order_detail": "تفاصيل الطلب",
+		"item": "العناطر",
+		"totals": "الأجمالي",
+		"total_price": ": السعر الكلي",
+		"shipping": ": الشحن",
+		"free": "مجاني",
+		"tax": ": الضريبه",
+		"coupon_code": ": كود الكوبون",
+		"order_total": ": إجمالي الطلب",
+		"payment_method": "أختر طريقه الدفع",
+		"confirm": "تأكيد",
+		"has_error": {
+			"message": "لقد حدث خطأ برجاء المحاوله مره اخرى",
+			"button": "موافق"
+		}
+	},
+	"states": {
+		"AL": "input",
+		"DZ": "input",
+		"AS": "input",
+		"AD": "input",
+		"AO": "input",
+		"AI": "input",
+		"AQ": "input",
+		"AG": "input",
+		"AM": "input",
+		"AW": "input",
+		"AZ": "input",
+		"BS": "input",
+		"BH": "input",
+		"BB": "input",
+		"BY": "input",
+		"PW": "input",
+		"BJ": "input",
+		"BM": "input",
+		"BT": "input",
+		"BO": "input",
+		"BQ": "input",
+		"BA": "input",
+		"BW": "input",
+		"IO": "input",
+		"VG": "input",
+		"BN": "input",
+		"BF": "input",
+		"CM": "input",
+		"CV": "input",
+		"KY": "input",
+		"CF": "input",
+		"TD": "input",
+		"CX": "input",
+		"CC": "input",
+		"CO": "input",
+		"KM": "input",
+		"CG": "input",
+		"CD": "input",
+		"CK": "input",
+		"CR": "input",
+		"HR": "input",
+		"CU": "input",
+		"CW": "input",
+		"CY": "input",
+		"DJ": "input",
+		"DM": "input",
+		"DO": "input",
+		"EC": "input",
+		"EG": "input",
+		"SV": "input",
+		"GQ": "input",
+		"ER": "input",
+		"ET": "input",
+		"FK": "input",
+		"FO": "input",
+		"FJ": "input",
+		"PF": "input",
+		"TF": "input",
+		"GA": "input",
+		"GM": "input",
+		"GE": "input",
+		"GH": "input",
+		"GI": "input",
+		"GL": "input",
+		"GD": "input",
+		"GU": "input",
+		"GT": "input",
+		"GG": "input",
+		"GN": "input",
+		"GW": "input",
+		"GY": "input",
+		"HT": "input",
+		"HM": "input",
+		"HN": "input",
+		"IM": "input",
+		"CI": "input",
+		"JM": "input",
+		"JE": "input",
+		"JO": "input",
+		"KZ": "input",
+		"KE": "input",
+		"KI": "input",
+		"KG": "input",
+		"LA": "input",
+		"LV": "input",
+		"LS": "input",
+		"LR": "input",
+		"LY": "input",
+		"LT": "input",
+		"LU": "input",
+		"MO": "input",
+		"MK": "input",
+		"MG": "input",
+		"MW": "input",
+		"MV": "input",
+		"ML": "input",
+		"MT": "input",
+		"MH": "input",
+		"MR": "input",
+		"MU": "input",
+		"FM": "input",
+		"MD": "input",
+		"MC": "input",
+		"MN": "input",
+		"ME": "input",
+		"MS": "input",
+		"MA": "input",
+		"MZ": "input",
+		"MM": "input",
+		"NA": "input",
+		"NR": "input",
+		"NC": "input",
+		"NI": "input",
+		"NE": "input",
+		"NU": "input",
+		"NF": "input",
+		"KP": "input",
+		"MP": "input",
+		"PS": "input",
+		"PA": "input",
+		"PG": "input",
+		"PY": "input",
+		"PN": "input",
+		"PR": "input",
+		"QA": "input",
+		"RO": "input",
+		"RU": "input",
+		"RW": "input",
+		"ST": "input",
+		"BL": "input",
+		"SH": "input",
+		"KN": "input",
+		"LC": "input",
+		"SX": "input",
+		"MF": "input",
+		"PM": "input",
+		"VC": "input",
+		"WS": "input",
+		"SM": "input",
+		"SA": "input",
+		"SN": "input",
+		"RS": "input",
+		"SC": "input",
+		"SL": "input",
+		"SB": "input",
+		"SO": "input",
+		"GS": "input",
+		"SS": "input",
+		"SD": "input",
+		"SR": "input",
+		"SJ": "input",
+		"SZ": "input",
+		"SY": "input",
+		"TW": "input",
+		"TJ": "input",
+		"TZ": "input",
+		"TL": "input",
+		"TG": "input",
+		"TK": "input",
+		"TO": "input",
+		"TT": "input",
+		"TN": "input",
+		"TC": "input",
+		"TV": "input",
+		"UG": "input",
+		"UA": "input",
+		"AE": "input",
+		"UM": "input",
+		"VI": "input",
+		"UY": "input",
+		"UZ": "input",
+		"VU": "input",
+		"VA": "input",
+		"VE": "input",
+		"EH": "input",
+		"YE": "input",
+		"ZM": "input",
+		"ZW": "input"
+	},
+	"thanks": {
+		"title": "تم ايصال طلبط",
+		"yourID": "رقم طلبك يكون #",
+		"myOrder": "طلبي"
+	},
+	"latest": {
+		"title": "وصل حديثا"
+	}
+}

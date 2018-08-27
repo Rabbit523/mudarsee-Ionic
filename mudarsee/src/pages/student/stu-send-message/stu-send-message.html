@@ -1,0 +1,54 @@
+<ion-header no-border>
+    <ion-navbar color="primary">
+        <ion-title> {{'stu_send_message.title'|translate}}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="messageForm" novalidate (ngSubmit)="(messageForm.valid && submitted) && sendMessage()">
+        <ion-list form-list>
+            <ion-item>
+                <ion-icon item-left class="tuts-avatar"></ion-icon>
+                <ion-input type="text" [(ngModel)]="messageDetails.name" placeholder="{{'stu_send_message.name'|translate}}" formControlName="name"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!messageForm.controls.name.pristine || submitted" [name]="(!messageForm.controls.name.valid && (messageForm.controls.name.dirty || submitted)) ? 'warning':'done-all'" [color]="(!messageForm.controls.name.valid && (messageForm.controls.name.dirty || submitted)) ? 'danger':'valid'"
+                    item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-document"></ion-icon>
+                <ion-label> {{'stu_send_message.select'|translate}}</ion-label>
+                <ion-select [(ngModel)]="messageDetails.course_id" formControlName="course">
+                    <ion-option *ngFor="let course of tutorCourses" value="{{course.course_id}}">{{course.course_name}}</ion-option>
+                </ion-select>
+                <ion-icon class="validation-icon" *ngIf="!messageForm.controls.course.pristine || submitted" [name]="(!messageForm.controls.course.valid && (messageForm.controls.course.dirty || submitted)) ? 'warning':'done-all'" [color]="(!messageForm.controls.course.valid && (messageForm.controls.course.dirty || submitted)) ? 'danger':'valid'"
+                    item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-envelope"></ion-icon>
+                <ion-input type="email" placeholder="{{'stu_send_message.email'|translate}}" [(ngModel)]="messageDetails.email" formControlName="email"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!messageForm.controls.email.pristine || submitted" [name]="(!messageForm.controls.email.valid && (messageForm.controls.email.dirty || submitted)) ? 'warning':'done-all'" [color]="(!messageForm.controls.email.valid && (messageForm.controls.email.dirty || submitted)) ? 'danger':'valid'"
+                    item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-phone-call"></ion-icon>
+                <ion-input type="tel" placeholder="{{'stu_send_message.phone_no'|translate}}" [(ngModel)]="messageDetails.phone" formControlName="phone"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!messageForm.controls.phone.pristine || submitted" [name]="(!messageForm.controls.phone.valid && (messageForm.controls.phone.dirty || submitted)) ? 'warning':'done-all'" [color]="(!messageForm.controls.phone.valid && (messageForm.controls.phone.dirty || submitted)) ? 'danger':'valid'"
+                    item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-chat-1"></ion-icon>
+                <ion-textarea type="text" placeholder="{{'stu_send_message.message'|translate}}" [(ngModel)]="messageDetails.message" formControlName="message"></ion-textarea>
+                <ion-icon class="validation-icon" *ngIf="!messageForm.controls.message.pristine || submitted" [name]="(!messageForm.controls.message.valid && (messageForm.controls.message.dirty || submitted)) ? 'warning':'done-all'" [color]="(!messageForm.controls.message.valid && (messageForm.controls.message.dirty || submitted)) ? 'danger':'valid'"
+                    item-right></ion-icon>
+            </ion-item>
+            <ion-item text-wrap>
+                <p>{{'stu_send_message.info'|translate}}.</p>
+                <p><strong>{{'stu_send_message.red_mes'|translate}} : {{credits_for_sending_message}}</strong></p>
+            </ion-item>
+        </ion-list>
+        <button ion-button block round color="danger" type="submit" (click)="submitted=true">{{'stu_send_message.send'|translate}}</button>
+    </form>
+</ion-content>

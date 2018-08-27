@@ -1,0 +1,34 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+   
+    <ion-title>{{'my_address.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div header-profile text-center>
+    <div class="user-img"><img src="{{user.photo}}" alt="Profile Picture"></div>
+    <div class="user-details">
+      <h3>{{userData.username}}</h3>
+      <p><span>{{'my_address.net'|translate}}: {{userData.net_credits}}</span><span>{{'my_address.per'|translate}}: {{currency_symbol}}{{per_credit_value}}</span></p>
+    </div>
+  </div>
+  <ion-list contact-list>
+    <ion-item-divider color="right">{{'my_address.title'|translate}}<button ion-button clear right (click)="editAddressDetails()">
+      <ion-icon class="tuts-edit2"></ion-icon></button> </ion-item-divider>
+      <ion-item>
+        <h4>{{'my_address.address'|translate}}:</h4>
+        <p *ngIf="userData.city!=''">{{userData.city}}</p>
+        <p *ngIf="userData.land_mark!=''">{{userData.land_mark}}</p>
+        <p *ngIf="userData.country!=''">{{userData.country}}</p>
+        <p *ngIf="userData.pin_code">{{userData.pin_code}}</p>
+      </ion-item>
+      <ion-item>
+        <h4>{{'my_address.info'|translate}}:</h4>
+        <p *ngIf="userData.phone!=''">{{'my_address.mobile'|translate}}: {{userData.phone_code}} {{userData.phone}}</p>
+        <p>{{'my_address.email'|translate}}: {{userData.email}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>

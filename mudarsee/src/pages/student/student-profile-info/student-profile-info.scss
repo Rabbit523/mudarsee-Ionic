@@ -1,0 +1,64 @@
+page-student-profile-info {
+  [header-profile] {
+    .user-details {
+      h3 {
+        color: $dark_c;
+      }
+      p {
+        color: $dark_c;
+
+        span {
+          position: relative;
+          &+span {
+            margin-left: 1.6em;
+            &:before {
+              position: absolute;
+              left: -.8em;
+              top: 50%;
+              height: 10px;
+              margin-top: -4px;
+              content: '';
+              width: 1px;
+              background: $dark_c;
+              opacity: .5;
+            }
+          }
+        }
+      }
+      &:before,
+      &:after {
+        background: $dark_c;
+      }
+    }
+  }
+  .update-camera {
+    position: relative;
+    bottom: 110px;
+    left: 210px;
+    color: #FFF;
+    background-color: #863e3e;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+.modal-icons1 {
+  font-size: 60px !important;
+  color: #FFF;
+  padding: 40px;
+}
+
+.update1 {
+  width: 85px;
+  height: 85px;
+  background-color: #494252;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.file_type {
+  position: relative;
+  left: 25px;
+}

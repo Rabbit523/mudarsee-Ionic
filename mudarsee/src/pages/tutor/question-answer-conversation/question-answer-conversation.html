@@ -1,0 +1,40 @@
+<ion-header no-shadow>
+  <ion-navbar color="light">
+    <ion-title>{{question.question_text}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div *ngFor="let conversation of question.questionConversation_filtered">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <div class="chatBubble">
+            <div class="chat-bubble {{conversation.position}}">
+              <img class="profile-pic {{conversation.position}}" src="{{conversation.img}}">
+              <div class="message">{{conversation.message}}</div>
+              <div class="message-detail">
+                <span class="time" *ngIf="conversation.id==''">{{conversation.datetime}}</span>
+                <span class="time" *ngIf="conversation.id!=''">{{conversation.datetime}}</span>
+                <ion-spinner *ngIf="conversation.id==''" color="light" name="dots"></ion-spinner>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <p padding *ngIf="question.questionConversation_filtered==''">{{'stu_question-answer.available_ans'|translate}}</p>
+  <ion-infinite-scroll position="top" *ngIf="showLoadMoreQuestions_conversation==true" (ionInfinite)="getQuestionConversation($event,question)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-textarea placeholder="{{'stu_question-answer.mess'|translate}}" [(ngModel)]="questionAnswer.message"></ion-textarea>
+    <ion-buttons end>
+      <button ion-button color="success" class="button-xl" (click)="replyMessage(question,questionAnswer.message)" [attr.disabled]="questionAnswer.message.length!=0? null :'true'">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

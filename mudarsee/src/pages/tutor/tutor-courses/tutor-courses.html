@@ -1,0 +1,35 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title logo>{{'stu_booking_details.sub_title'|translate}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchtext"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let course of courses | filter:searchtext">
+      <button (click)="deleteCourse(course)" ion-button clear icon-only item-end>
+        <ion-icon class="tuts-garbage"></ion-icon>
+      </button>
+      <div (click)="openCourseDetails(course)">
+        <h2>{{course.course_name}}</h2>
+        <p><span><ion-icon name="calendar"></ion-icon> {{course.fee}}</span>
+          <span> <ion-icon name="time"></ion-icon> 
+                      {{course.duration_value}} 
+                      {{course.duration_type}}
+                    </span>
+        </p>
+        <p><small>{{course.days_off}}</small></p>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="addTutorCourse()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

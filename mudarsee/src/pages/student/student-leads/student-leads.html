@@ -1,0 +1,34 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon class="tuts-list"></ion-icon></button>
+    <ion-title>{{'stu_lead_details.sub_title'|translate}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-item no-lines>
+      <ion-icon name="color-fill" item-left-color="stable"></ion-icon>
+      <ion-label>{{'stu_lead_details.filter'|translate}}</ion-label>
+      <ion-select [(ngModel)]="leadType">
+        <ion-option value="">{{'stu_lead_details.all'|translate}}</ion-option>
+        <ion-option value="Opened">{{'stu_lead_details.open'|translate}}</ion-option>
+        <ion-option value="Closed">{{'stu_lead_details.close'|translate}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <ion-list>
+  <ion-item *ngFor="let lead of leads | filter:leadType" (click)="openLeadDetails(lead)">
+    <h2>{{lead.title_of_requirement}}</h2>
+    <p><span>{{'stu_lead_details.course'|translate}} : {{lead.course_name}}</span></p>
+    <p><span>{{'stu_lead_details.loc'|translate}}: {{lead.location_name}}</span></p>
+    <p><span>{{'stu_lead_details.duration'|translate}}: {{lead.duration_needed}} </span> <span><ion-badge [color]="lead.status=='Closed' ? 'secondary': 'danger'" item-end>{{lead.status}}</ion-badge></span></p>
+  </ion-item>
+</ion-list>
+<p padding *ngIf="leads.length==0">{{'stu_lead_details.available'|translate}}</p>
+<ion-infinite-scroll *ngIf="showLoadMore==true" (ionInfinite)="getLeads($event)">
+  <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+<ion-fab right bottom>
+  <button ion-fab (click)="postLead()"><ion-icon name="add"></ion-icon></button>
+</ion-fab>
+</ion-content>

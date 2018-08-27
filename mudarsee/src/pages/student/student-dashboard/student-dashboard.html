@@ -1,0 +1,74 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_dashboard.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+ <ion-grid>
+   <ion-row>
+     <ion-col>
+       <ion-card class="color-green" (click)="netCredits()">
+         <div class="card-title">{{dashboardDetails.net_credits}}</div>
+         <div class="card-subtitle">{{'stu_dashboard.net'|translate}}</div>
+       </ion-card>
+     </ion-col>
+      <ion-col>
+      <ion-card class="color-blue" (click)="bookings('all')">
+        <div class="card-title">{{dashboardDetails.total_bookings}}</div>
+        <div class="card-subtitle"> {{'stu_dashboard.total'|translate}}</div>
+      </ion-card>
+      </ion-col>
+   </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="color-voilet" (click)="bookings('pending')">
+          <div class="card-title">{{dashboardDetails.pending_bookings}}</div>
+          <div class="card-subtitle">{{'stu_dashboard.pending'|translate}}</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card class="color-pink" (click)="bookings('completed')">
+            <div class="card-title">{{dashboardDetails.completed_bookings}}</div>
+            <div class="card-subtitle">{{'stu_dashboard.completed'|translate}}</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card  class="color-dark-blue" (click)="bookings('approved')">
+        <div class="card-title">{{dashboardDetails.approved_bookings}}</div>
+        <div class="card-subtitle">{{'stu_dashboard.approved'|translate}}</div>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card class="color-light-blue" (click)="leads()">
+          <div class="card-title">{{dashboardDetails.open_leads}}</div>
+          <div class="card-subtitle"> {{'stu_dashboard.leads'|translate}}</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+            <ion-col>
+                <ion-card class="color-dark-blue1" (click)="openQuestions()">
+                    <div class="card-title">{{dashboardDetails.questions}}</div> 
+                    <!-- <div class="card-title">10</div> -->
+                    <div class="card-subtitle"><strong>{{'stu_dashboard.answer'|translate}}</strong></div>
+                </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card class="color-dark-purple" (click)="openChat()">
+                    <div class="card-title">{{dashboardDetails.messages}}</div> 
+                    <!-- <div class="card-title">20</div> -->
+                    <div class="card-subtitle"><strong>{{'stu_dashboard.messages'|translate}}</strong> </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+ </ion-grid>
+</ion-content>

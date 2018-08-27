@@ -1,0 +1,27 @@
+<ion-header no-border>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+        <ion-title>{{'stu_fav_tutors.title'|translate}} </ion-title>
+    </ion-navbar>
+    <ion-toolbar color="primary">
+        <ion-searchbar [(ngModel)]="searchText"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item *ngFor="let tutor of favTutors | filter: searchText">
+        <ion-thumbnail item-left>
+            <img *ngIf="tutor.photo!=''" src="{{serviceName.profileImages}}{{tutor.photo}}">
+            <img *ngIf="tutor.photo==''" src="{{serviceName.defaultImage}}">
+            <div [class]="tutor.availability_status==1?'status:online':'status:offline'"></div>
+        </ion-thumbnail>
+        <ion-icon name="trash" color="danger" item-right (click)="removeTutor(tutor.fav_id)"></ion-icon>
+        <div (click)="openTutorProfile(tutor)">
+            <h2>{{tutor.username}} </h2>
+            <p>{{'stu_fav_tutors.demo'|translate}}  : {{tutor.free_demo}}</p>
+            <p>{{'stu_fav_tutors.exprience'|translate}} {{tutor.teaching_experience}} {{tutor.duration_of_experience}}</p>
+            <p> {{'stu_fav_tutors.qualification'|translate}}  {{tutor.qualification}}</p>
+        </div>
+    </ion-item>
+</ion-content>

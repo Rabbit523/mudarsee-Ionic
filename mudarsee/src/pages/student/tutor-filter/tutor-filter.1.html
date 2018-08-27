@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{'stu_teaching_types.filter'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="getFilterTutors()" color="white">
+        <ion-icon class="ion-md-checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar [(ngModel)]="searchText"></ion-searchbar>
+  </ion-toolbar>
+  <ion-segment [(ngModel)]="filterTutors">
+    <ion-segment-button value="course" (click)="setSegment('course')"> {{'stu_teaching_types.course'|translate}} </ion-segment-button>
+    <ion-segment-button value="location" (click)="setSegment('location')"> {{'stu_teaching_types.loct'|translate}} </ion-segment-button>
+    <ion-segment-button value="teachingType" (click)="setSegment('teachingType')"> {{'stu_teaching_types.type'|translate}} </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content>
+  <div [ngSwitch]="filterTutors">
+    <ion-list *ngSwitchCase="'course'">
+      <ion-item *ngFor="let course of courses | filter:searchText">
+        <ion-label> {{course.course_name}} ({{course.avail_records_cnt}})</ion-label>
+        <ion-checkbox [(ngModel)]="course.checked"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'location'">
+      <ion-item *ngFor="let location of locations | filter:searchText">
+        <ion-label>{{location.location_name}} ({{location.avail_records_cnt}})</ion-label>
+        <ion-checkbox [(ngModel)]="location.checked"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'teachingType'">
+      <ion-item *ngFor="let teaching of teachingTypes | filter:searchText">
+        <ion-label>{{teaching.teaching}} ({{teaching.avail_records_cnt}})</ion-label>
+        <ion-checkbox [(ngModel)]="teaching.checked"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

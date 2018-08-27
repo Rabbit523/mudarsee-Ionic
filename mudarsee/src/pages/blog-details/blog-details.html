@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{blog_details.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-card>
+  		<ion-card-title>
+      			{{blog_details.title}}
+      	</ion-card-title>
+  		<img [src]="blog_details.image_url"/>
+  		<ion-item>
+		    <ion-avatar item-start>
+		      <img [src]="blog_details.author_image_full_url">
+		    </ion-avatar>
+		    <h2 text-wrap>{{blog_details.author_name}} , <span class="date_span">{{blog_details.approved_datetime}}</span></h2>
+		</ion-item>
+  		<ion-card-content>
+  			<p [innerHTML]="blog_details.description"></p>
+  		</ion-card-content>
+	</ion-card>
+</ion-content>

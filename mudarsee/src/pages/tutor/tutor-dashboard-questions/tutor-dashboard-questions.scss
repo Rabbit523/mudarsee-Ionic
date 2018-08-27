@@ -1,0 +1,37 @@
+page-tutor-dashboard-questions {
+  .que-profile-pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .question_div {
+    padding: 5px;
+    h3 {
+      color: #222a56;
+      position: relative;
+      top: -36px;
+      left: 43px;
+      margin-right: 30px;
+      font-size: 1.5rem;
+    }
+    h4 {
+      color: #222a56;
+      position: relative;
+      top: -25px;
+      left: 43px;
+    }
+    p {
+      color: #222a56;
+      position: relative;
+      top: -20px;
+      left: 43px;
+    }
+  }
+
+  ion-card.card {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  }
+}

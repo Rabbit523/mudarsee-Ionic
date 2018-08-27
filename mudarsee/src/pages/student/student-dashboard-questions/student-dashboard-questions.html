@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar color="primary"> 
+        <ion-title> {{'stu_dashboard_chat.anwser'|translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card class="question_card" *ngFor="let question of question_members" (click)="openConversationPage(question)">
+    <div class="question_div">
+        <img class="que-profile-pic" [src]="question.imageFullUrl" />
+        <h3 text-wrap color="primary"> {{question.question_text}}</h3>
+        <h4>{{question.name}},{{question.username}} </h4>
+        <ion-badge *ngIf="question.converation_count!=0" class="count_badge" color="Done">{{question.converation_count}}</ion-badge> 
+    </div>
+    </ion-card> 
+<p padding *ngIf="question_members.length==0"> {{'stu_dashboard_chat.ans_available'|translate}}</p>
+<ion-infinite-scroll *ngIf="showLoadMore==true" (ionInfinite)="getQuestionTutorsList($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

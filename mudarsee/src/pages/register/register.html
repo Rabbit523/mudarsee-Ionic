@@ -1,0 +1,71 @@
+<ion-header no-border>
+    <ion-navbar color="primary">
+        <ion-title>{{'signup.title'|translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="registerForm" novalidate (ngSubmit)="(registerForm.valid && submitted) && register()">
+        <ion-list form-list>
+            <ion-item>
+                <ion-icon item-left class="tuts-hand"></ion-icon>
+                <ion-label>{{'signup.As'|translate}}  </ion-label>
+                <ion-select [(ngModel)]="registerData.group" formControlName="group">
+                    <ion-option selected value="">{{'signup.select'|translate}}</ion-option>
+                    <ion-option value="2">{{'signup.Student'|translate}}</ion-option>
+                    <ion-option value="3">{{'signup.Tutor'|translate}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-avatar"></ion-icon>
+                <ion-input type="text" placeholder="{{'signup.First_Name'|translate}}" [(ngModel)]="registerData.firstName" formControlName="firstName"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!registerForm.controls.firstName.pristine || submitted" [name]="(!registerForm.controls.firstName.valid && (registerForm.controls.firstName.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!registerForm.controls.firstName.valid && (registerForm.controls.firstName.dirty || submitted)) ? 'danger' : 'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-avatar"></ion-icon>
+                <ion-input type="text" placeholder="{{'signup.Last_Name'|translate}}" [(ngModel)]="registerData.lastName" formControlName="lastName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-envelope"></ion-icon>
+                <ion-input type="email" placeholder="{{'signup.Email'|translate}}" [(ngModel)]="registerData.email" formControlName="email"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!registerForm.controls.email.pristine || submitted" [name]="(!registerForm.controls.email.valid && (registerForm.controls.email.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!registerForm.controls.email.valid && (registerForm.controls.email.dirty || submitted)) ? 'danger' : 'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-phone-call"></ion-icon>
+                <ion-label>{{'signup.Code'|translate}} </ion-label>
+                <ion-select [(ngModel)]="registerData.phoneCode" formControlName="phoneCode">
+                    <ion-option *ngFor="let code of phoneCodes" value="{{code.id}}">{{code.name}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-phone-call"></ion-icon>
+                <ion-input type="number" placeholder="{{'signup.Phone'|translate}}" [(ngModel)]="registerData.phone" formControlName="phone"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!registerForm.controls.phone.pristine || submitted" [name]="(!registerForm.controls.phone.valid && (registerForm.controls.phone.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!registerForm.controls.phone.valid && (registerForm.controls.phone.dirty || submitted)) ? 'danger' : 'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-placeholder2"></ion-icon>
+                <ion-input type="number" placeholder="{{'signup.Pin'|translate}}" [(ngModel)]="registerData.pincode" formControlName="pincode"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!registerForm.controls.pincode.pristine || submitted" [name]="(!registerForm.controls.pincode.valid && (registerForm.controls.pincode.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!registerForm.controls.pincode.valid && (registerForm.controls.pincode.dirty || submitted)) ? 'danger' : 'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-padlock"></ion-icon>
+                <ion-input type="password" placeholder="{{'signup.Password'|translate}}" [(ngModel)]="registerData.password" formControlName="password"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!registerForm.controls.password.pristine || submitted" [name]="(!registerForm.controls.password.valid && (registerForm.controls.password.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!registerForm.controls.password.valid && (registerForm.controls.password.dirty || submitted)) ? 'danger' : 'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-padlock"></ion-icon>
+                <ion-input type="password" placeholder="{{'signup.confirm_password'|translate}}" [(ngModel)]="registerData.confirmPassword" formControlName="confirmPassword"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!registerForm.controls.confirmPassword.pristine || submitted" [name]="(!registerForm.controls.confirmPassword.valid && (registerForm.controls.confirmPassword.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!registerForm.controls.confirmPassword.valid && (registerForm.controls.confirmPassword.dirty || submitted)) ? 'danger' : 'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <div padding>
+                <button ion-button block round color="danger" (click)="submitted=true" type="submit">{{'signup.Sign'|translate}} </button>
+            </div>
+            <div class="already-have-account" text-center><span>{{'signup.login'|translate}}</span> <a clear link (click)="navToLoginPage()"><strong> {{'signup.Sign_In'|translate}} </strong></a> </div>
+        </ion-list>
+    </form>
+</ion-content>

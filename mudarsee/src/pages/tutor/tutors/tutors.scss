@@ -1,0 +1,15 @@
+page-tutors {
+  .rating-experience {
+    >div {
+      display: inline-block;
+      font-size: $fs_small;
+      color: $dark_c;
+      &.star {
+        color: $warning_c;
+      }
+      &+div {
+        margin-left: 1em;
+      }
+    }
+  }
+}

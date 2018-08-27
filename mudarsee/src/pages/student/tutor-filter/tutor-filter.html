@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <!-- <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button> -->
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{'stu_teaching_types.filter'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="getFilterTutors()" color="white">
+        <ion-icon class="ion-md-checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="tutor-filter-background">
+  <!-- <ion-label class="text1">{{'stu_teaching_types.title'|translate}}</ion-label>
+  <ion-label class="text2">{{'stu_teaching_types.desc1'|translate}}<br/>{{'stu_teaching_types.desc2'|translate}}</ion-label> -->
+  <ion-list>
+    <ion-item >
+      <ion-select [(ngModel)]="course" multiple="true" cancelText="{{'stu_teaching_types.no'|translate}}" okText="{{'stu_teaching_types.yes'|translate}}" interface="popover" placeholder="{{'stu_teaching_types.loct'|translate}}" (ionChange)="changeCourse(course)">
+          <ion-option *ngFor="let course of courses" value="{{course.course_name}}" selected="{{course.checked}}" >{{course.course_name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item >
+        <ion-select [(ngModel)]="location" multiple="true" cancelText="{{'stu_teaching_types.no'|translate}}" okText="{{'stu_teaching_types.yes'|translate}}" interface="popover" placeholder="{{'stu_teaching_types.course'|translate}}" (ionChange)="changeLocation(location)">
+            <ion-option *ngFor="let location of locations" value="{{location.location_name}}" selected="{{location.checked}}" >{{location.location_name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item >
+          <ion-select [(ngModel)]="teaching" multiple="true" cancelText="{{'stu_teaching_types.no'|translate}}" okText="{{'stu_teaching_types.yes'|translate}}" interface="popover" placeholder="{{'stu_teaching_types.type'|translate}}" (ionChange)="changeTeaching(teaching)">
+              <ion-option *ngFor="let teaching of teachingTypes" value="{{teaching.teaching}}" selected="{{teaching.checked}}" >{{teaching.teaching}}</ion-option>
+          </ion-select>
+        </ion-item>
+  </ion-list>
+  <!-- <button ion-button icon-start (click)="getFilterTutors()">
+    <ion-icon name="search"></ion-icon>
+    {{'stu_teaching_types.btnsearch'|translate}}
+  </button> -->
+</ion-content>

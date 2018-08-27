@@ -1,0 +1,75 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_past_lead.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="leadForm" novalidate (ngSubmit)="(leadForm.valid && submitted) && postLead()">
+    <ion-list contact-list>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.loc'|translate}} </ion-label>
+        <ion-select formControlName="location" [(ngModel)]="leadData.location_id">
+          <ion-option *ngFor="let location of locations" value="{{location.id}}">{{location.location_name}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!leadForm.controls.location.pristine || submitted" [name]="(!leadForm.controls.location.valid && (leadForm.controls.location.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!leadForm.controls.location.valid && (leadForm.controls.location.dirty || submitted)) ? 'danger':'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.course'|translate}}</ion-label>
+        <ion-select formControlName="course" [(ngModel)]="leadData.course_id">
+          <ion-option *ngFor="let course of courses" value="{{course.id}}">{{course.name}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!leadForm.controls.course.pristine || submitted" [name]="(!leadForm.controls.course.valid && (leadForm.controls.course.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!leadForm.controls.course.valid && (leadForm.controls.course.dirty || submitted)) ? 'danger':'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked> {{'stu_past_lead.perferred'|translate}}</ion-label>
+        <ion-select formControlName="teachingType" [(ngModel)]="leadData.teaching_type_id">
+          <ion-option *ngFor="let teaching of teachingTypes" value="{{teaching.id}}">{{teaching.teaching_type}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!leadForm.controls.teachingType.pristine || submitted" [name]="(!leadForm.controls.teachingType.valid && (leadForm.controls.teachingType.dirty || submitted)) ? 'warning':'done-all'" [color]="(!leadForm.controls.teachingType.valid && (leadForm.controls.teachingType.dirty || submitted)) ? 'danger':'valid'" item-right> </ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.priority'|translate}}</ion-label>
+        <ion-select formControlName="priorityOfRequirement" [(ngModel)]="leadData.priority_of_requirement">
+          <ion-option value="immediately">{{'stu_past_lead.immediately'|translate}}</ion-option>
+          <ion-option value="after_a_week">{{'stu_past_lead.week'|translate}}</ion-option>
+          <ion-option value="after_a_month">{{'stu_past_lead.month'|translate}}</ion-option>
+        </ion-select>
+        <ion-icon class="validation-icon" *ngIf="!leadForm.controls.priorityOfRequirement.pristine || submitted" [name]="(!leadForm.controls.priorityOfRequirement.valid && (leadForm.controls.priorityOfRequirement.dirty || submitted)) ? 'warning':'done-all'" [color]="(!leadForm.controls.priorityOfRequirement.valid && (leadForm.controls.priorityOfRequirement.dirty || submitted)) ? 'danger':'valid'" item-right> </ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.pre_status'|translate}}</ion-label>
+        <ion-input type="text" formControlName="presentStatus" [(ngModel)]="leadData.present_status" placeholder="{{'stu_past_lead.pre_status_pla'|translate}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.duration'|translate}}</ion-label>
+        <ion-input type="text" formControlName="duration" [(ngModel)]="leadData.duration_needed" placeholder="{{'stu_past_lead.duration_pla'|translate}}"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!leadForm.controls.duration.pristine || submitted" [name]="(!leadForm.controls.duration.valid && (leadForm.controls.duration.dirty || submitted)) ? 'warning':'done-all'" [color]="(!leadForm.controls.duration.valid && (leadForm.controls.duration.dirty || submitted)) ? 'danger':'valid'" item-right> </ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.pay'|translate}}</ion-label>
+        <ion-input type="text" formControlName="budget" [(ngModel)]="leadData.budget" placeholder="{{'stu_past_lead.pay_pla'|translate}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.payment'|translate}}</ion-label>
+        <ion-select formControlName="budgetType" [(ngModel)]="leadData.budget_type">
+          <ion-option value="one_time">{{'stu_past_lead.time'|translate}}</ion-option>
+          <ion-option value="hourly">{{'stu_past_lead.hour'|translate}}</ion-option>
+          <ion-option value="monthly">{{'stu_past_lead.monthly'|translate}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.required'|translate}}</ion-label>
+        <ion-input type="text" formControlName="titleOfRequirement" [(ngModel)]="leadData.title_of_requirement"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!leadForm.controls.titleOfRequirement.pristing ||submitted" [name]="(!leadForm.controls.titleOfRequirement.valid && (leadForm.controls.titleOfRequirement.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!leadForm.controls.titleOfRequirement.valid && (leadForm.controls.titleOfRequirement.dirty || submitted)) ? 'danger':'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>{{'stu_past_lead.details'|translate}}</ion-label>
+        <ion-textarea formControlName="requirementDetails" [(ngModel)]="leadData.requirement_details"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <button ion-button block round color="danger" type="submit" (click)="submitted=true">{{'stu_past_lead.submit'|translate}}</button>
+  </form>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="white">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{'stu_lead_details.filter'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()" color="secondary">
+        <ion-icon class="ion-md-checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar no-border-top color="white">
+    <ion-segment [(ngModel)]="filterTutors">
+      <ion-segment-button value="course"> {{'stu_lead_details.course'|translate}} </ion-segment-button>
+      <ion-segment-button value="location"> {{'stu_lead_details.loc'|translate}} </ion-segment-button>
+      <ion-segment-button value="teachingType">{{'stu_lead_details.type'|translate}} </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <ion-toolbar color="white">
+    <ion-searchbar [(ngModel)]="term"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div [ngSwitch]="filterTutors">
+    <ion-list *ngSwitchCase="'course'">
+      <ion-item *ngFor="let course of courses | filter:term">
+        <ion-label>{{course.name}}</ion-label>
+        <ion-checkbox value="course.slug" (change)="updateCheckedOptions(course.slug, $event)" [(ngModel)]="cse[course.slug]"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'location'">
+      <ion-item *ngFor="let location of locations | filter:term ">
+        <ion-label>{{location.name}}</ion-label>
+        <ion-checkbox [(ngModel)]="locat[location.slug]"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'teachingType'">
+      <ion-item *ngFor="let type of teaching_types | filter:term ">
+        <ion-label>{{type.name}}</ion-label>
+        <ion-checkbox ng-value="type.slug" [(ngModel)]="teachingType[type.slug]"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

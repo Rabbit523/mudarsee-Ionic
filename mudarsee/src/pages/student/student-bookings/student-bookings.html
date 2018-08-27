@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+          <ion-icon class="tuts-list"></ion-icon>
+      </button>
+      <ion-title>{{'stu_booking.title'|translate}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-item no-lines>
+        <ion-icon name="color-fill" item-left-color="stable"></ion-icon>
+        <ion-label>{{'stu_booking.filter'|translate}} </ion-label>
+        <ion-select [(ngModel)]="bookingFilter" (ionChange)="filterByStatus()">
+            <ion-option value="all">{{'stu_booking.all'|translate}}</ion-option>
+            <ion-option value="pending">{{'stu_booking.pending'|translate}}</ion-option>
+            <ion-option value="approved">{{'stu_booking.approve'|translate}}</ion-option>
+            <ion-option value="session_initiated">{{'stu_booking.session'|translate}}</ion-option>
+            <ion-option value="running">{{'stu_booking.run'|translate}}</ion-option>
+            <ion-option value="completed">{{'stu_booking.complete'|translate}}</ion-option>
+            <ion-option value="called_for_admin_intervention">{{'stu_booking.admin'|translate}}</ion-option>
+            <ion-option value="closed">{{'stu_booking.close'|translate}}</ion-option>
+        </ion-select>
+    </ion-item>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let booking of filteredBookings">
+            <div (click)="openBookingDetails(booking)">
+                <h2>{{booking.tutor_name}}</h2>
+                <p>{{booking.course_name}}</p>
+                <p><span><ion-icon name="calendar"></ion-icon> {{booking.start_date}} </span>
+                    <span><ion-icon name="time"> {{booking.duration_value}} {{booking.duration_type}} </ion-icon></span>
+                </p>
+                <p><small>{{booking.status | case }}</small></p>
+            </div>
+        </ion-item>
+    </ion-list>
+    <p padding *ngIf="filteredBookings.length==0">{{'stu_booking.available'|translate}}</p>
+    <ion-infinite-scroll *ngIf="showLoadMore==true" (ionInfinite)="getBookings($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

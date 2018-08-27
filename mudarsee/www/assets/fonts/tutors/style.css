@@ -1,0 +1,489 @@
+@font-face {
+  font-family: 'tutors';
+  src:  url('fonts/tutors.eot?ggl67x');
+  src:  url('fonts/tutors.eot?ggl67x#iefix') format('embedded-opentype'),
+    url('fonts/tutors.ttf?ggl67x') format('truetype'),
+    url('fonts/tutors.woff?ggl67x') format('woff'),
+    url('fonts/tutors.svg?ggl67x#tutors') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="tuts-"], [class*=" tuts-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tutors' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tuts-location:before {
+  content: "\e996";
+}
+.tuts-wallet:before {
+  content: "\e997";
+}
+.tuts-list:before {
+  content: "\e998";
+}
+.tuts-bill:before {
+  content: "\e999";
+}
+.tuts-addthis:before {
+  content: "\e964";
+}
+.tuts-amazon:before {
+  content: "\e965";
+}
+.tuts-bebo:before {
+  content: "\e966";
+}
+.tuts-behance:before {
+  content: "\e967";
+}
+.tuts-bing:before {
+  content: "\e968";
+}
+.tuts-blogger:before {
+  content: "\e969";
+}
+.tuts-delicious:before {
+  content: "\e96a";
+}
+.tuts-deviantart:before {
+  content: "\e96b";
+}
+.tuts-digg:before {
+  content: "\e96c";
+}
+.tuts-dribble:before {
+  content: "\e96d";
+}
+.tuts-dropbox:before {
+  content: "\e96e";
+}
+.tuts-ebay:before {
+  content: "\e96f";
+}
+.tuts-evernote:before {
+  content: "\e970";
+}
+.tuts-facebook:before {
+  content: "\e971";
+}
+.tuts-flickr:before {
+  content: "\e972";
+}
+.tuts-forrst:before {
+  content: "\e973";
+}
+.tuts-foursquare:before {
+  content: "\e974";
+}
+.tuts-foursquare-1:before {
+  content: "\e975";
+}
+.tuts-google-plus:before {
+  content: "\e976";
+}
+.tuts-grooveshark:before {
+  content: "\e977";
+}
+.tuts-html5:before {
+  content: "\e978";
+}
+.tuts-instagram:before {
+  content: "\e979";
+}
+.tuts-kickstarter:before {
+  content: "\e97a";
+}
+.tuts-lastfm:before {
+  content: "\e97b";
+}
+.tuts-linkedin:before {
+  content: "\e97c";
+}
+.tuts-livejournal:before {
+  content: "\e97d";
+}
+.tuts-myspace:before {
+  content: "\e97e";
+}
+.tuts-opera:before {
+  content: "\e97f";
+}
+.tuts-paypal:before {
+  content: "\e980";
+}
+.tuts-picasa:before {
+  content: "\e981";
+}
+.tuts-pinterest:before {
+  content: "\e982";
+}
+.tuts-rss:before {
+  content: "\e983";
+}
+.tuts-sharethis:before {
+  content: "\e984";
+}
+.tuts-skype:before {
+  content: "\e985";
+}
+.tuts-soundcloud:before {
+  content: "\e986";
+}
+.tuts-stumbleupon:before {
+  content: "\e987";
+}
+.tuts-technorati:before {
+  content: "\e988";
+}
+.tuts-telegram:before {
+  content: "\e989";
+}
+.tuts-tumblr:before {
+  content: "\e98a";
+}
+.tuts-twitter:before {
+  content: "\e98b";
+}
+.tuts-viber:before {
+  content: "\e98c";
+}
+.tuts-vimeo:before {
+  content: "\e98d";
+}
+.tuts-vk:before {
+  content: "\e98e";
+}
+.tuts-wikipedia:before {
+  content: "\e98f";
+}
+.tuts-wordpress:before {
+  content: "\e990";
+}
+.tuts-xing:before {
+  content: "\e991";
+}
+.tuts-yahoo:before {
+  content: "\e992";
+}
+.tuts-yandex:before {
+  content: "\e993";
+}
+.tuts-youtube:before {
+  content: "\e994";
+}
+.tuts-zerply:before {
+  content: "\e995";
+}
+.tuts-abacus:before {
+  content: "\e900";
+}
+.tuts-balance:before {
+  content: "\e901";
+}
+.tuts-bar-chart:before {
+  content: "\e902";
+}
+.tuts-bell:before {
+  content: "\e903";
+}
+.tuts-book:before {
+  content: "\e904";
+}
+.tuts-brain:before {
+  content: "\e905";
+}
+.tuts-cells:before {
+  content: "\e906";
+}
+.tuts-class:before {
+  content: "\e907";
+}
+.tuts-clipboard:before {
+  content: "\e908";
+}
+.tuts-compact-disc:before {
+  content: "\e909";
+}
+.tuts-compass:before {
+  content: "\e90a";
+}
+.tuts-computer:before {
+  content: "\e90b";
+}
+.tuts-desk:before {
+  content: "\e90c";
+}
+.tuts-desk-lamp:before {
+  content: "\e90d";
+}
+.tuts-diploma:before {
+  content: "\e90e";
+}
+.tuts-document:before {
+  content: "\e90f";
+}
+.tuts-earth-globe:before {
+  content: "\e910";
+}
+.tuts-edit:before {
+  content: "\e911";
+}
+.tuts-eraser:before {
+  content: "\e912";
+}
+.tuts-exam:before {
+  content: "\e913";
+}
+.tuts-exam-1:before {
+  content: "\e914";
+}
+.tuts-file:before {
+  content: "\e915";
+}
+.tuts-file-folder:before {
+  content: "\e916";
+}
+.tuts-flask:before {
+  content: "\e917";
+}
+.tuts-floppy-disk:before {
+  content: "\e918";
+}
+.tuts-geometry:before {
+  content: "\e919";
+}
+.tuts-glasses:before {
+  content: "\e91a";
+}
+.tuts-hourglass:before {
+  content: "\e91b";
+}
+.tuts-info:before {
+  content: "\e91c";
+}
+.tuts-invention:before {
+  content: "\e91d";
+}
+.tuts-knowledge-transfer:before {
+  content: "\e91e";
+}
+.tuts-locker:before {
+  content: "\e91f";
+}
+.tuts-magnet:before {
+  content: "\e920";
+}
+.tuts-medal:before {
+  content: "\e921";
+}
+.tuts-mortarboard:before {
+  content: "\e922";
+}
+.tuts-open-book:before {
+  content: "\e923";
+}
+.tuts-pen:before {
+  content: "\e924";
+}
+.tuts-physics:before {
+  content: "\e925";
+}
+.tuts-pi:before {
+  content: "\e926";
+}
+.tuts-placeholder:before {
+  content: "\e927";
+}
+.tuts-podium:before {
+  content: "\e928";
+}
+.tuts-presentation:before {
+  content: "\e929";
+}
+.tuts-school-material:before {
+  content: "\e92a";
+}
+.tuts-science:before {
+  content: "\e92b";
+}
+.tuts-set-square:before {
+  content: "\e92c";
+}
+.tuts-smartphone:before {
+  content: "\e92d";
+}
+.tuts-speech-bubble:before {
+  content: "\e92e";
+}
+.tuts-student:before {
+  content: "\e92f";
+}
+.tuts-tie:before {
+  content: "\e930";
+}
+.tuts-translation:before {
+  content: "\e931";
+}
+.tuts-avatar:before {
+  content: "\e932";
+}
+.tuts-avatar-1:before {
+  content: "\e933";
+}
+.tuts-back:before {
+  content: "\e934";
+}
+.tuts-book2:before {
+  content: "\e935";
+}
+.tuts-cancel:before {
+  content: "\e936";
+}
+.tuts-chat:before {
+  content: "\e937";
+}
+.tuts-chat-1:before {
+  content: "\e938";
+}
+.tuts-chat-2:before {
+  content: "\e939";
+}
+.tuts-copy:before {
+  content: "\e93a";
+}
+.tuts-dislike:before {
+  content: "\e93b";
+}
+.tuts-download:before {
+  content: "\e93c";
+}
+.tuts-download-1:before {
+  content: "\e93d";
+}
+.tuts-edit2:before {
+  content: "\e93e";
+}
+.tuts-envelope:before {
+  content: "\e93f";
+}
+.tuts-folder:before {
+  content: "\e940";
+}
+.tuts-garbage:before {
+  content: "\e941";
+}
+.tuts-glasses2:before {
+  content: "\e942";
+}
+.tuts-hand:before {
+  content: "\e943";
+}
+.tuts-headphones:before {
+  content: "\e944";
+}
+.tuts-heart:before {
+  content: "\e945";
+}
+.tuts-house:before {
+  content: "\e946";
+}
+.tuts-like:before {
+  content: "\e947";
+}
+.tuts-link:before {
+  content: "\e948";
+}
+.tuts-logout:before {
+  content: "\e949";
+}
+.tuts-magnifying-glass:before {
+  content: "\e94a";
+}
+.tuts-monitor:before {
+  content: "\e94b";
+}
+.tuts-musical-note:before {
+  content: "\e94c";
+}
+.tuts-next:before {
+  content: "\e94d";
+}
+.tuts-next-1:before {
+  content: "\e94e";
+}
+.tuts-padlock:before {
+  content: "\e94f";
+}
+.tuts-paper-plane:before {
+  content: "\e950";
+}
+.tuts-phone-call:before {
+  content: "\e951";
+}
+.tuts-photo-camera:before {
+  content: "\e952";
+}
+.tuts-pie-chart:before {
+  content: "\e953";
+}
+.tuts-piggy-bank:before {
+  content: "\e954";
+}
+.tuts-placeholder2:before {
+  content: "\e955";
+}
+.tuts-printer:before {
+  content: "\e956";
+}
+.tuts-reload:before {
+  content: "\e957";
+}
+.tuts-settings:before {
+  content: "\e958";
+}
+.tuts-settings-1:before {
+  content: "\e959";
+}
+.tuts-share:before {
+  content: "\e95a";
+}
+.tuts-shopping-bag:before {
+  content: "\e95b";
+}
+.tuts-shopping-cart:before {
+  content: "\e95c";
+}
+.tuts-shuffle:before {
+  content: "\e95d";
+}
+.tuts-speaker:before {
+  content: "\e95e";
+}
+.tuts-star:before {
+  content: "\e95f";
+}
+.tuts-tag:before {
+  content: "\e960";
+}
+.tuts-upload:before {
+  content: "\e961";
+}
+.tuts-upload-1:before {
+  content: "\e962";
+}
+.tuts-vector:before {
+  content: "\e963";
+}
+

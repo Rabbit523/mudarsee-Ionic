@@ -1,0 +1,44 @@
+page-login {
+
+
+
+    .scroll-content {
+        .content {
+            text-align: center;
+            .logo {
+                text-align: center;
+                padding: 2em 3em 1.5em;
+                margin-bottom: 2em;
+                position: relative;
+                img {
+                    max-width: 400px;
+                    width: 100%;
+                }
+                &:before {
+                    width: 10%;
+                    content: '';
+                    height: 3px;
+                    left: 45%;
+                    bottom: 0;
+                    position: absolute;
+                    background: $white_02;
+                }
+            }
+            ion-row {
+                ion-col {
+                    .fab {
+                        display: inline-block;
+                    }
+                }
+            }
+            p {
+                color: $gs_c;
+                font-size: 1.1em;
+            }
+            h1 {
+                margin: .3em 0 0 0;
+                font-size: 2rem;
+            }
+        }
+    }
+}

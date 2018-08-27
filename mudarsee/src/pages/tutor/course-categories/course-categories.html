@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'course_cat.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <div *ngFor="let categorie of categories">
+      <button ion-item (click)="itemSelected(categorie)">
+        {{categorie.name}}
+      </button>
+    </div>
+  </ion-list>
+  <p padding *ngIf="categories.length==0">{{'course_cat.Available'|translate}}</p>
+  <ion-infinite-scroll *ngIf="showLoadMore==true" (ionInfinite)="getCourseCategories($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

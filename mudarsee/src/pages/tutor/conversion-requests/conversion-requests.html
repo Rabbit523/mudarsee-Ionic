@@ -1,0 +1,47 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'conversion_request.title'|translate}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-item no-lines>
+      <ion-icon name="color-fill" item-left color="stable"></ion-icon>
+      <ion-label>{{'conversion_request.type'|translate}}</ion-label>
+      <ion-select [(ngModel)]="conversionFilter">
+        <ion-option value="">{{'conversion_request.all'|translate}} </ion-option>
+        <ion-option value="pending">{{'conversion_request.pending'|translate}} </ion-option>
+        <ion-option value="done">{{'conversion_request.done'|translate}} </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item (click)="openConversionRequestsDetails(history)" *ngFor="let history of conversion_history | filter:conversionFilter">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-10>
+            <h3 text-wrap>{{history.user_paypal_email}}</h3> </ion-col>
+          <ion-col col-2>
+            <ion-badge [color]="history.status_of_payment=='Done'? 'secondary':'danger'">
+              <small>{{history.status_of_payment}}</small>
+            </ion-badge>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-10>
+            <p class="date_credit">
+              <ion-icon name="calendar"></ion-icon> {{history.created_at}}</p>
+          </ion-col>
+          <ion-col col-2>
+            <p>
+              <ion-note class="note_credit" item-right color="danger">{{history.no_of_credits_to_be_converted}}</ion-note>
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

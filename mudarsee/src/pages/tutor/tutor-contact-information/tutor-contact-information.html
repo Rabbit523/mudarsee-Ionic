@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'my_address.info'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="editAddressDetails()">
+        <ion-icon name="md-create"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list contact-list>
+    <ion-item-divider color="right">{{'my_address.title'|translate}} </ion-item-divider>
+    <ion-item>
+      <h4>{{'my_address.address'|translate}}</h4>
+      <p *ngIf="userData.city!=''">{{userData.city}}</p>
+      <p *ngIf="userData.land_mark!=''">{{userData.land_mark}}</p>
+      <p *ngIf="userData.country!=''">{{userData.country}}</p>
+      <p *ngIf="userData.pin_code">{{userData.pin_code}}</p>
+    </ion-item>
+    <ion-item>
+      <h4>{{'my_address.info'|translate}}:</h4>
+      <p *ngIf="userData.phone!=''">{{'my_address.mobile'|translate}}: {{userData.phone_code}} {{userData.phone}}</p>
+      <p>{{'my_address.email'|translate}}: {{userData.email}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header no-shadow>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title text-wrap *ngIf="!show_hide_search">{{receiver.course_name}}</ion-title>
+    <ion-searchbar *ngIf="show_hide_search" class="search_bar" [(ngModel)]="searchInput" (ionInput)="searchQuestions($event)" (ionCancel)="onCancel($event)" [showCancelButton]="false"></ion-searchbar>
+    <ion-buttons end>
+      <button (click)="showHideSearch()" ion-button icon-only>
+        <ion-icon [name]="show_hide_search ? 'close' : 'search'"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let question of questions_filtered" (click)="openConversationPage(question,sender,receiver)">
+    <div class="question_div">
+      <img class="que-profile-pic" [src]="question.imageFullUrl" />
+      <h4 color="primary"> {{question.question_text}}</h4>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 align-self-start>
+            <button ion-button clear color="menu-o">
+              <ion-icon name="ios-arrow-down-outline"></ion-icon>
+              <h5>{{'stu_question-answer.conversation'|translate}} ({{question.chat_count}})</h5>
+            </button>
+          </ion-col>
+          <ion-col col-6 align-self-end>
+            <button ion-button clear color="menu-o">
+              <ion-icon name="ios-calendar-outline"></ion-icon>
+              <h5>{{question.datetime}}</h5>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card>
+  <p padding *ngIf="questions.length==0">{{'stu_question-answer.available'|translate}} </p>
+  <ion-infinite-scroll *ngIf="showLoadMoreQuestions==true" (ionInfinite)="getQuestions($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

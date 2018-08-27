@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_booking_details.cont_title'|translate}}</ion-title>
+    <ion-buttons end>
+      <button *ngIf="courseDetails.status!='closed'" (click)="editCourse(courseDetails)" ion-button icon-only>
+        <ion-icon name="md-create"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <h2>{{courseDetails.course_name}}</h2>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{'stu_booking_details.content'|translate}</h2>
+      <p [innerHTML]="courseDetails.content" text-capitalize></p>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.value'|translate}</p>
+          <h2>{{courseDetails.duration_value}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.type'|translate}</p>
+          <h2>{{courseDetails.duration_type}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.fee'|translate}</p>
+          <h2>{{courseDetails.fee}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.per'|translate}</p>
+          <h2>{{courseDetails.per_credit_value}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.time'|translate}</p>
+          <h2>{{courseDetails.time_slot}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.day_off'|translate}</p>
+          <h2>{{courseDetails.days_off}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.course'|translate}</p>
+          <h2>{{courseDetails.status}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-row>
+        <ion-col>
+          <p>{{'stu_booking_details.created'|translate}</p>
+          <h2>{{courseDetails.created_at | date:"dd/MM/yyyy"}}</h2>
+        </ion-col>
+        <ion-col>
+          <p>{{'stu_booking_details.updated'|translate}</p>
+          <h2>{{courseDetails.updated_at | date:"dd/MM/yyyy"}}</h2>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>

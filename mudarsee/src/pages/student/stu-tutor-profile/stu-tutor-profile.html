@@ -1,0 +1,94 @@
+<ion-header no-border>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+          <ion-icon class="tuts-list"></ion-icon>
+      </button>
+      <ion-title> {{'stu_tutor_profile.title'|translate}}</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="sendMessageModal(tutorDetails.id)">
+            <ion-icon name="mail"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-navbar>
+</ion-header>
+<ion-content>
+    <div header-profile text-center>
+        <div class="user-img">
+            <img *ngIf="tutorDetails.photo!= ''" src="{{serviceName.profileImages}}{{tutorDetails.photo}}">
+            <img *ngIf="tutorDetails.photo==''" src="{{serviceName.defaultImage}}">
+        </div>
+        <div class="user-details">
+            <h3>{{tutorDetails.username}}</h3>
+            <p class="status">
+                <span *ngIf="tutorDetails.is_online=='no'"> {{'stu_tutor_profile.off'|translate}}</span>
+                <span *ngIf="tutorDetails.is_online=='yes'">{{'stu_tutor_profile.on'|translate}}</span>
+                <span>{{tutorDetails.gender}}</span>
+                <span>{{tutorDetails.dob}}</span>
+            </p>
+            <div class="review-rating">
+                <div class="star" color="warning">
+                    <rating [(ngModel)]="tutorDetails.tutor_rating" max="5" readOnly="true"></rating>
+                </div>
+                <button *ngIf="tutorDetails.no_of_reviews>0" ion-button clear small color="danger" (click)="openReviews(tutorDetails.id)">{{tutorDetails.no_of_reviews}} {{'stu_tutor_profile.reviews'|translate}}</button>
+            </div>
+        </div>
+    </div>
+    <ion-list contact-list>
+        <ion-list-header color="light"> {{'stu_tutor_profile.info'|translate}}</ion-list-header>
+        <ion-item text-wrap *ngIf="tutorDetails.show_contact=='All' || tutorDetails.show_contact=='Email'">
+            <p> {{'stu_tutor_profile.email'|translate}}</p>
+            <h4><a href="mailto:{{tutorDetails.email}}">{{tutorDetails.email}}</a></h4>
+        </ion-item>
+        <ion-item text-wrap *ngIf="tutorDetails.show_contact=='All' || tutorDetails.show_contact=='Mobile'">
+            <p>{{'stu_tutor_profile.phone_no'|translate}}</p>
+            <h4>{{tutorDetails.phone_code}}<a href="tel:{{tutorDetails.phone}}"> {{tutorDetails.phone}} </a></h4>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-row no-padding>
+                <ion-col>
+                    <p> {{'stu_tutor_profile.experience'|translate}}</p>
+                    <h4>{{tutorDetails.teaching_experience}} {{tutorDetails.duration_of_experience}}</h4>
+                </ion-col>
+                <ion-col>
+                    <p> {{'stu_tutor_profile.qualification'|translate}}</p>
+                    <h4>{{tutorDetails.qualification}}</h4>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+        <ion-item text-wrap>
+            <p>{{'stu_tutor_profile.lang'|translate}}</p>
+            <h4>{{tutorDetails.language_of_teaching}}</h4>
+        </ion-item>
+        <ion-item text-wrap>
+            <p>Teaching class types {{'stu_tutor_profile.class'|translate}}</p>
+            <h4 *ngIf="tutorDetails.academic_class=='yes'">{{'stu_tutor_profile.academic'|translate}}</h4>
+            <h4 *ngIf="tutorDetails.non_academic_class=='yes'">{{'stu_tutor_profile.non_academic'|translate}}</h4>
+        </ion-item>
+    </ion-list>
+    <ion-list contact-list>
+        <ion-list-header color="light">{{'stu_tutor_profile.more'|translate}}</ion-list-header>
+        <ion-item text-wrap>
+            <h4>{{'stu_tutor_profile.courses'|translate}}</h4>
+            <p>{{tutorDetails.tutoring_courses}}</p>
+        </ion-item>
+        <ion-item text-wrap>
+            <h4>{{'stu_tutor_profile.location'|translate}}</h4>
+            <p>{{tutorDetails.tutoring_locations}}</p>
+        </ion-item>
+        <ion-item text-wrap>
+            <h4>{{'stu_tutor_profile.career'|translate}}</h4>
+            <p>{{tutorDetails.profile}}</p>
+        </ion-item>
+    </ion-list>
+    <ion-list contact-list *ngIf="tutorDetails.tutor_experience!=0">
+        <ion-list-header color="light">{{'stu_tutor_profile.my_experience'|translate}}</ion-list-header>
+        <ion-item text-wrap *ngFor="let experience of tutorDetails.tutor_experience">
+            <h4>{{experience.from_date}} - {{experience.to_date}}</h4>
+            <p><strong color="danger">{{experience.company}} - {{experience.role}}</strong></p>
+            <p>{{experience.description}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer >
+    <button ion-button block round color="danger" (click)="openReserveYourSpot(tutorDetails)">{{'stu_tutor_profile.request'|translate}}</button>
+</ion-footer>

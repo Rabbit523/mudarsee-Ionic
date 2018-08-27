@@ -1,0 +1,54 @@
+page-tutors-dasboard {
+  ion-card {
+    position: relative;
+    background-color: #000;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+  }
+  .card-title {
+    position: absolute;
+    top: 25%;
+    font-size: 1.5em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    padding-top: 56px;
+    width: 100%;
+    color: #FFF;
+  }
+  .color-green {
+    background-color: #731c47;
+  }
+  .color-blue {
+    background-color: #392d67;
+  }
+  .color-voilet {
+    background-color: #ab066c;
+  }
+  .color-pink {
+    background-color: #ce3d16;
+  }
+  .color-dark-blue {
+    background-color: #213877;
+  }
+  .color-light-blue {
+    background-color: #365673;
+  }
+  .color-dark-blue1 {
+    background-color: #5d4c46;
+  }
+  .color-dark-purple {
+    background-color: #421c52;
+  }
+  ion-card.card {
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  }
+  .col {
+    padding: 0px;
+  }
+}

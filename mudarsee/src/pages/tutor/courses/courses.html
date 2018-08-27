@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'course_cat.course'|translate}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar [(ngModel)]="searchtext"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let course of courses | filter:searchtext" (click)="openTutors(course)">
+      <ion-thumbnail thumbnail-custom item-left> <img [src]="course.image"> </ion-thumbnail>
+      <h2 [innerHTML]="course.name"></h2>
+      <p [innerHTML]="course.description"></p>
+    </ion-item>
+  </ion-list>
+  <p padding *ngIf="courses.length==0">{{'course_cat.cor_avail'|translate}}</p>
+  <ion-infinite-scroll *ngIf="showLoadMore==true" (ionInfinite)="getCourses($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

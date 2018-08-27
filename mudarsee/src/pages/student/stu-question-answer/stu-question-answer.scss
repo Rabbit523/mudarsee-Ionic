@@ -1,0 +1,98 @@
+page-stu-question-answer {
+    ion-list {
+        &.list {
+            margin: 0;
+        }
+    }
+    img.profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 10px;
+    }
+    img.profile-pic.left {
+        left: 10px;
+        margin-left: -60px;
+        bottom: -9px;
+    }
+    img.profile-pic.right {
+        right: 10px;
+        margin-right: -60px;
+        bottom: 0px;
+    }
+    .message {
+        font-size: 14px;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    .item-inner {
+        margin-top: -10px;
+    }
+    span.time {
+        position: relative;
+        font-size: 11px;
+    }
+    ion-spinner {
+        position: relative;
+        top: 13px;
+    }
+    .que-profile-pic {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .question_div {
+        margin-bottom: -50px !important;
+        padding: 5px;
+        h4 {
+            color: #222a56;
+            position: relative;
+            top: -34px;
+            left: 43px;
+            font-size: 1.5rem;
+        }
+        h5{
+            position:relative;
+            font-size: 1.1rem;
+            left:5px;
+        }
+        button {
+            position: relative;
+            color: #5d5e79;
+            top: -10px;
+            p {
+                position: relative;
+                top: 2px;
+                padding-left: 10px;
+            }
+        }
+        .grid {
+            position: relative;
+            padding-bottom: -25px;
+            top: -30px;
+            left: 16px;
+        }
+    }
+    ion-card.card {
+        background-color: #fff;
+        border-radius: 0px;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    }
+    left {
+        float: left;
+    }
+    right {
+        float: right;
+    }
+    ion-toolbar.search_div {
+        // top: -60px;
+    }
+    .add_question_fab {
+        bottom: 20px;
+    }
+    .search_bar {
+        min-height: 0px;
+    }
+}

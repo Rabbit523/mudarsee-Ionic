@@ -1,0 +1,11 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'setting.new_terms'| translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div [innerHTML]="terms_conditions"></div>
+</ion-content>

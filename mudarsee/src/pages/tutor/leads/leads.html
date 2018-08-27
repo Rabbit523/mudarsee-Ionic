@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_lead_details.sub_title'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openLeadsFilter()">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar [(ngModel)]="term"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let lead of leads | filter:term" (click)="openLeadDetails(lead)">
+      <ion-thumbnail item-left>
+        <img src="{{profileImage+lead.photo}}">
+        <div class="status {{lead.availability_status}}"></div>
+      </ion-thumbnail>
+      <p color="danger" [innerHTML]="lead.username"></p>
+      <h2 [innerHTML]="lead.title_of_requirement"></h2>
+      <p [innerHTML]="lead.requirement_details"></p>
+    </ion-item>
+  </ion-list>
+  <p padding *ngIf="leads.length==0">{{'stu_lead_details.available'|translate}}</p>
+  <ion-infinite-scroll *ngIf="showLoadMore==true" (ionInfinite)="getLeads($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

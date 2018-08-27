@@ -1,0 +1,57 @@
+<ion-header no-border>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon class="tuts-list"></ion-icon>
+        </button>
+        <ion-title>{{'contact.title'| translate }}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list form-list>
+        <form [formGroup]="contactForm" novalidate (ngSubmit)="(contactForm.valid && submitted) && contact()">
+            <ion-item>
+                <ion-icon item-left class="tuts-avatar"></ion-icon>
+                <ion-input type="text" formControlName="firstName" placeholder="{{'contact.first_name'| translate }}" [(ngModel)]="contactDetails.first_name"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!contactForm.controls.firstName.pristine || submitted"
+                [name]="(!contactForm.controls.firstName.valid && (contactForm.controls.firstName.dirty || submitted)) ? 'warning':'done-all'"
+                [color]="(!contactForm.controls.firstName.valid && (contactForm.controls.firstName.dirty || submitted)) ? 'danger':'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-avatar"></ion-icon>
+                <ion-input type="text" formControlName="lastName" placeholder=" {{'contact.last_name'| translate }}" [(ngModel)]="contactDetails.last_name"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!contactForm.controls.lastName.pristine || submitted"
+                [name]="(!contactForm.controls.lastName.valid && (contactForm.controls.lastName.dirty || submitted)) ? 'warning':'done-all'"
+                [color]="(!contactForm.controls.lastName.valid && (contactForm.controls.lastName.dirty || submitted)) ? 'danger':'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-envelope"></ion-icon>
+                <ion-input type="email" formControlName="email" placeholder="{{'contact.email'| translate }}" [(ngModel)]="contactDetails.email"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!contactForm.controls.email.pristine || submitted"
+                [name]="(!contactForm.controls.email.valid && (contactForm.controls.email.dirty || submitted)) ? 'warning':'done-all'"
+                [color]="(!contactForm.controls.email.valid && (contactForm.controls.email.dirty || submitted)) ? 'danger':'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-phone-call"></ion-icon>
+                <ion-input type="text" placeholder="{{'contact.subject'| translate }}" formControlName="subject" [(ngModel)]="contactDetails.subject"></ion-input>
+                <ion-icon class="validation-icon" *ngIf="!contactForm.controls.subject.pristine || submitted"
+                [name]="(!contactForm.controls.subject.valid && (contactForm.controls.subject.dirty || submitted)) ? 'warning':'done-all'"
+                [color]="(!contactForm.controls.subject.valid && (contactForm.controls.subject.dirty || submitted)) ? 'danger':'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left class="tuts-chat-1"></ion-icon>
+                <ion-textarea formControlName="message" placeholder="{{'contact.message'| translate }}" [(ngModel)]="contactDetails.message"> </ion-textarea>
+                <ion-icon class="validation-icon" *ngIf="!contactForm.controls.message.pristine || submitted"
+                [name]="(!contactForm.controls.message.valid && (contactForm.controls.message.dirty || submitted)) ? 'warning':'done-all'"
+                [color]="(!contactForm.controls.message.valid && (contactForm.controls.message.dirty || submitted)) ? 'danger':'valid'"
+                item-right></ion-icon>
+            </ion-item>
+            <div padding>
+                <button ion-button block round color="danger" type="submit" (click)="submitted=true"> {{'contact.send'| translate }}</button>
+            </div>
+        </form>
+    </ion-list>
+</ion-content>

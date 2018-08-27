@@ -1,0 +1,1127 @@
+{
+	"general": {
+		"error_first": {
+			"message": "Can't connect to network, please check again",
+			"button": "OK"
+		},
+		"login_expired": {
+			"message": "The authentication session has expired.",
+			"button": "OK"
+		},
+		"disconnect": "Disconnected",
+		"no_data": "No products",
+		"to_price": " - ",
+		"username": "Username *",
+		"email": "Email *",
+		"first_name": "First name *",
+		"last_name": "Last name *",
+		"password": "Password *",
+		"reset": "RESET",
+		"need_login": "You need Login",
+		"login": "Login",
+		"pullingIcon": "ios-refresh-outline",
+		"pullToRefresh": "",
+		"refreshingSpinner": "circles",
+		"refreshing": "",
+		"timeAgo": {
+			"minute": " minute ago",
+			"minutes": " minutes ago",
+			"hour": " hour ago",
+			"hours": " hours ago",
+			"day": " day ago",
+			"days": " days ago"
+		},
+		"has_error": "An error occurred, please try again later.",
+		"cancel": "Cancel",
+		"ok": "OK",
+		"copyright": "© 2017 Copyright. All rights reserved."
+	},
+	"tabs": {
+		"home": "Home",
+		"categories": "Categories",
+		"search": "Search",
+		"account": "Me"
+	},
+	"home": {
+		"deal": "Deal of the day",
+		"sale": "sale",
+		"latest": "Latest",
+		"all": "All",
+		"viewAll": "View All",
+		"categories": "Our categories",
+		"no_categories": "No categories",
+		"whatClientSay": "WHAT'S CLIENT SAY?",
+		"newsletter": "Newsletter",
+		"newsletterInput": "Enter your e-mail",
+		"services": [
+			{
+				"title": "7 Day Free Returns",
+				"icon": "icon-reply",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			},
+			{
+				"title": "100% Certified",
+				"icon": "icon-check",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			},
+			{
+				"title": "Life time Exchange",
+				"icon": "icon-reload",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			},
+			{
+				"title": "Support 24/24",
+				"icon": "icon-phone",
+				"text": "Lorem Ipsum is simply  dummy text of the printing"
+			}
+		]
+	},
+	"categories": {
+		"title": "Categories",
+		"no_data": "No categories",
+		"category": "Category",
+		"filter": "Filter",
+		"sort": "Sort",
+		"sold": "Sold: ",
+		"done": "DONE",
+		"price_range": "Price Range: ",
+		"sortData": [
+			{
+				"text": "Time: Latest",
+				"value": "-date_created_gmt"
+			},
+			{
+				"text": "Price: Lowest first",
+				"value": "price"
+			},
+			{
+				"text": "Price: Highest first",
+				"value": "-price"
+			},
+			{
+				"text": "Product Name: A to Z",
+				"value": "name"
+			},
+			{
+				"text": "Product Name: Z to A",
+				"value": "-name"
+			}
+		]
+	},
+	"search": {
+		"title": "Search for products",
+		"no_result": "No result",
+		"sold": "Sold: "
+	},
+	"account": {
+		"login": "LOGIN",
+		"signout": {
+			"title": "Modern Shop",
+			"message": "Do you want to logout?",
+			"no": "Cancel",
+			"yes": "OK"
+		},
+		"my_order": "My order",
+		"favorite": "Favorite",
+		"push_notification": "Push notification",
+		"text_size": {
+			"title": "Text size",
+			"option": {
+				"small": "Small",
+				"normal": "Normal",
+				"large": "Large",
+				"extra_large": "Extra large"
+			},
+			"cancel": "Cancel"
+		},
+		"Language": {
+			"title": "Language",
+			"option": {
+				"ar": "العربيه",
+				"en": "English"
+			},
+			"cancel": "إلغاء"
+		},
+		"app_share": "App Share",
+		"rate_us": "Rate Us",
+		"terms_of_use": "Terms of Use",
+		"privacy_policy": "Privacy Policy",
+		"contact_us": "Contact Us",
+		"about_us": "About Us",
+		"version": "Version 1.0.3"
+	},
+	"login": {
+		"title": "Login",
+		"forgot_password": "Forgot password?",
+		"signupText": "Not a member yet? ",
+		"signup": "Sign up",
+		"wrong": "Username or password is incorrect",
+		"forgot_title": "Forgot password?",
+		"forgot_body": "In order to revice reset link  by mail, please enter the Username you provided during the registration process.",
+		"forgot_placeholder": "Username",
+		"email_placeholder": "Email",
+		"Password_placeholder":"Password",
+		"forgot_send": "Send reset link",
+		"forgot_success": "Link sent successfully",
+		"or":"or"
+	},
+	"signup": {
+		"title": "Register",
+		"As":"Register As ",
+		"select":"Please Select Group ",
+		"Student":"Student",
+		"Tutor":"Tutor",
+		"First_Name":"First Name",
+		"Last_Name":"Last Name",
+		"Email":"Email",
+		"Code":"Phone Code",
+		"Phone":"Phone Number",
+		"Pin":"Pin Code",
+		"Password":"Password",
+		"Sign":"Sign Up",
+		"Sign_In":"Sign In",
+		"confirm_password": "Confirm password",
+		"login": "Already have an account? ",
+		"success": "Registration complete",
+		"Submit":"Submit",
+		"reset":"Please enter your Email so we can send you an email to reset your password ",
+		"forgot_pass":"Forgot Passowrd"
+	},
+	"setting":{
+		"title":"Settings",
+		"about":"About Us ",
+		"contact":"Contact Us",
+		"terms":"Terms Conditions",
+		"share":"Share To Friends ",
+		"logout":"Logout",
+		"new_terms":"Terms and Conditions"
+
+	},
+	"contact_details":{
+    "title":"Update Contact Details",
+	"city":"City",
+	"landmark":"Landmark",
+	"country":"Country",
+	"pin":"Pincode",
+	"phone":"Phone",
+	"classes":"Type of Classes",
+	"academic":"Academic",
+	"no_academic":"Non Academic",
+	"subtitle":"Tutor contact details",
+	"submit":"Submit"
+
+	},
+	"credit_trans_history":{
+		"title":"Credit Transactions History",
+		"filter":"Filter",
+		"all":"All",
+		"credited":"Credited",
+		"Debited":"Debited"
+
+
+		},
+		"find_tutor":{
+			"title":"Tutors",
+			"demo":"Free Demo",
+			"exprience":"Experience ",
+			"qualification":"Qualification",
+			"tutors":"No Tutors Available"
+
+
+		},
+		"my_address":{
+			"title":"My Address",
+			"net":"Net Credits",
+			"address":"Address ",
+			"info":"Contact Information",
+			"mobile":"Mobile",
+			"email":"Email",
+			"per":"Per Credit Value"
+
+		},
+		"my_course_purchases":{
+			"title":"My Course Purchases",
+			"name":"Tutor name",
+			"purchases":"Purchased Date",
+			"max":"Max Downloads",
+			"total":"Total Downloads"
+
+
+		},
+		"stu_chat":{
+			"placeholder":"Type message..."
+		},
+		"stu_fav_tutors":{
+			"title":"Favourite Tutors",
+			"demo":"Free Demo",
+			"exprience":"Experience ",
+			"qualification":"Qualification",
+			  "sub_title":"Tutors"
+
+
+		},
+		"stu_question_answer":{
+			  "title":"Questions",
+			"available":"No Questions Available",
+			"placeholder":"Type Question Here...",
+			"conversation":"Conversation",
+			"available_ans":"No Answers Available",
+			"mess":"Type message..."
+
+		},
+		"stu_reserve_your_spot":{
+			"title":"Reserve Your Spot",
+			"select":"Select A Course",
+			"location":"Select Preferred Location",
+			"home":"Home",
+			"online":"Online",
+			"select_loc":"Select Location",
+			"select_date":"Select Date",
+			"select_time":"Select Time-slot",
+			"placeholder":"Hello My name is Diana and.....",
+			"content":"Course Content",
+			"day_off":"Days off",
+			"request":"Request This Tutor"
+		},
+		"stu_send_message":{
+			"title":"Send Me Your Message",
+			"select":"Select Course",
+			"name":"Name",
+			"phone_no":"Phone Number",
+			"email":"Email",
+			"message":"My message is....",
+			"info":"We will never sell or rent your private info",
+			"red_mes":"Credits required for sending message",
+			"send":"Send Message"
+
+		},
+		"stu_tutor_profile":{
+			"title":"Tutor Profile",
+			"off":"Offline Now",
+			"on":"Online Now",
+			"reviews":"Reviews",
+			"info":"Personal Information",
+			"email":"Email",
+			"phone_no":"Phone Number",
+			"experience":"Experience",
+			"qualification":"Qualification",
+			"lang":"Language of Teaching",
+			"class":"Teaching class types",
+			"academic":"Academic",
+			"non_academic":"Non-Academic",
+			"more":"More About Me",
+			"courses":"Tutoring Courses",
+			"location":"Tutoring Locations",
+			"career":"Career Experience",
+			"my_experience":"My Experience",
+			"request":"Request Tutor"
+
+		},
+		"stu_booking_details":{
+			"title":"Booking Details",
+			"content":"Content",
+			"value":"Duration value",
+			"type":"Duration Type",
+			"fee":"Fee (In credits)",
+			"per":"Per Credit Value()",
+			"preferred":"Preferred Commence Date",
+			"date":"End Date",
+			"time":"Timeslot",
+			"day_off":"Days off",
+			"location":"Preferred Location",
+			"message":"Message",
+			"admin":"Admin Commission Percentage (in Credits) (With credits)",
+			"prev":"Prev status",
+			"booking":" Booking Status",
+			"desc":"Status Desc",
+			"created":"Created at",
+			"updated":"Updated at",
+			"cont_title":"Course Details",
+			"course":"Course status",
+			"sub_title":"Tutor Courses"
+
+		},
+		"stu_booking":{
+			"title":"Bookings",
+			"filter":"Filters",
+			"all":"All",
+			"pending":"Pending",
+			"approve":"Approved",
+			"session":"Session Initiated",
+			"run":"Running",
+			"complete":"Completed",
+			"admin":"Called for Admin Intervention",
+			"close":"Closed",
+			 "claim":"Claim For Admin Intervention",
+			"available":"No Bookings Available"
+
+		},
+		"stu_courses":{
+			"title":"Courses",
+			"update":"Update"
+
+
+		},
+		"stu_dashboard":{
+			"title":"Dashboard",
+			"net":"Net Credits",
+			"total":"Total Bookings",
+			"pending":"Bookings Pending",
+		  "completed":"Bookings Completed",
+		  "approved":"Bookings Approved",
+		  "leads":"Leads",
+			"answer":"Answers",
+			"messages":"Messages",
+			 "questions":"Questions",
+      "run":"Booking Running",
+      "courses":"Total Tutoring Courses"
+
+		},
+		"stu_dashboard_chat":{
+			"title":"Messages",
+			"availabl":"No messages availabl",
+			"anwser":"Answers",
+			"ans_available":"No Answers available"
+
+		},
+		"stu_lead_details":{
+			"title":"Lead Details",
+			"loc":"Location",
+			"name":"Course Name",
+			"type":"Teaching Type",
+		  "pres_status":"Present Status",
+		  "priority":"Priority of requirement",
+		  "duration":"Duration",
+		  "budget":"Budget",
+		  "budget_type":"Budget Type",
+		  "title_of_requirement":"Title of requirement",
+		  "details":"Requirement details",
+		  "views":"No of views",
+			"status":"Status",
+			"created":"Created at",
+		  "updated":"Updated at",
+
+		  "sub_title":"Leads",
+		  "available":"No Leads Available",
+	"filter":"Filter",
+	"all":"All",
+	"open":"Opened",
+	"close":"Closed",
+	"course":"Course"
+
+
+		},
+		"stu_location":{
+			"title":"Locations",
+			"update":"Update"
+
+		},
+		"stu_past_lead":{
+			"title":"Post Lead",
+		  "loc":"Preferred Location",
+		   "course":"Course Seeking",
+			"perferred":"Preferred Teaching Type",
+			"priority":"Priority of Requirement",
+			"immediately":"Immediately",
+			"week":"After a Week",
+		   "month":"After a Month",
+		   "pre_status":"Your Present Status",
+			"duration":"Duration needed to complete course in",
+			"pay":"Credits You can pay",
+			"payment":"Payment Type",
+			"time":"One Time",
+			"hour":"Hourly",
+			"monthly":"Monthly",
+		  "required":"Title Of Requirement",
+		  "details":"Requirement Details",
+		  "duration_pla":"Ex: 15 days or 2 months",
+		  "pre_status_pla":"Ex: Student or Employee",
+		  "pay_pla":"Credits",
+		  "submit":"Submit"
+
+		},
+		"stu_privacy":{
+			"title":"Manage Privacy",
+			"demo":"Free Demo",
+			"yes":"Yes",
+			"no":"No",
+			"search":"Visibility in Search",
+		  "privacy":"Set Privacy",
+		  "all":"Show All",
+			"email":"Show Email",
+			"mobile":"Show Mobile",
+			"none":"Show None",
+			"availability":"Availability",
+			"submit":"Submit"
+
+		},
+		"stu_profile":{
+
+  "paypal":"Paypal Email",
+  "bank":"Bank account details",
+			"title":"Profile",
+			"net":"Net Credits",
+			"per":"Per Credit Value",
+			"info":"Personal Information",
+			"first":"First Name",
+		  "last":"Last Name",
+		  "email":"Email",
+			"date":"Date of Birth",
+			"gender":"Gender",
+			"male":"Male",
+			"female":"Female",
+		  "lang":"Language of Teaching",
+		  "blog":"Blog/Website",
+			"facebook":"Facebook Profile",
+			"twitter":"Twitter Profile",
+			"linkedin":"Linkedin Profile",
+			"skype":"Skype Profile",
+			"pro":"Profile Information",
+        	"desc":"Profile Description",
+	       "seo":"Meta SEO Keywords",
+	        "meta":"Meta Description",
+	        "page":"Profile Page Title",
+             "qualification":"Qualification",
+             "far":"How far are you willing to travel?In Km",
+              "travel":"Do You Have Your Own Vehicle To Travel?",
+               "yes":"Yes",
+               "no":"No",
+
+      "sub_title":"Profile Information",
+      "duration":"Duration Experience",
+      "mon":"Months",
+      "year":"Years",
+      "teaching":"Teaching Experience",
+      "services":"Describe Your Experience And Services",
+		  "submit":"Submit"
+
+		},
+		"stu_teaching_types":{
+			"teaching":"Preferred Teaching Types",
+			"filter":"Filter",
+			"course":"Course",
+			"loct":"Location",
+			"type":"Teaching Type",
+			"review":"Reviews",
+			"per":"Azalya Abia",
+			"submit":"Submit",
+			"title":"Explorer - Enrich - Excel",
+			"desc1":"Everything You Need In Order To Find The Right",
+			"desc2":"Class For You",
+			"btnsearch":"SEARCH YOUR TEACHER",
+			"yes":"Yes",
+			"no":"No"
+		},
+		"add_tutor_exp":{
+	   "title":"Add Experience",
+	   "company":"Company",
+    	"role":"Role",
+       "desc":"Description",
+	   "from":"From",
+    	"to":"To",
+     	"save":"Save"
+
+
+},
+"conversion_request":{
+	"title":"Conversion Requests",
+	"type":"Conversion type",
+	"all":"All",
+	"pending":"Pending",
+	"done":"Done"
+
+},
+	"course_cat":{
+			"title":"Course Categories",
+			"course":"Courses",
+			"cor_avail":"No Course  Available",
+			"Available":"No Course categories Available"
+
+		},
+		"conversion_history":{
+	"title":"Conversion History",
+	"bank":"Bank code (Bankleitzahl)",
+	"Pending":"Pending",
+	"domestic":"domestic account number",
+	"IBAN":"IBAN"
+},
+"conversion_request_details":{
+	"title":"Conversion Details",
+	"id":"Booking id",
+	"paypal":"User paypal email",
+	"ac":"User bank ac details",
+	"converted":"No of credits to be converted",
+	"admin":"Admission commission",
+	  "per":"Per credit cost",
+  	"total":"Total Amount",
+    "status":"Status of paymen",
+  	"updated":"Updated at"
+
+},
+"tut_lead_details":{
+	"type":"Student type",
+	"profile":"Profile",
+	"retitle":"Title Of Requirement",
+	"details":"Requirement Details",
+	"course":"Course Seeking",
+	"location":"Preferred location",
+  "teaching":"Preffered Teaching Type",
+	"status":"Student present status",
+  "priority":"Priority Of Requirement",
+  "duration":"Duration Needed",
+  "budget":"Budget"
+},
+"add_courses":{
+	"name":"Course Name",
+	"type":"Duration type",
+	"hr":"Hours",
+	"days":"Days",
+	"months":"Months",
+	"year":"Years",
+  "value":"Duration value",
+  "fee":"Fee (In credits)",
+  "content":"Content",
+  "time":"Time slots",
+  "day_off":"Days off",
+  "sun":"SUN",
+  "mon":"MON",
+  "tue":"TUE",
+  "wed":"WED",
+  "thu":"THU",
+  "fri":"FRI",
+  "sat":"SAT",
+  "order":"Sort order",
+  "Cancel":"Cancel"
+},
+"tutor_exper":{
+	"title":"Experience",
+	"location":"Tutor Locations",
+	"Update":"Update",
+  "type":"Tutor Teaching Types"
+
+
+},
+
+"":{
+	"":"",
+	"":"",
+	"":"",
+	"":"",
+	"":"",
+	"":"",
+	"":""
+
+},
+"studentMenu":
+{
+
+     "title_Dashboard": "Dashboard",
+     "title_booking": "Bookings",
+     "title_lead": "My Leads",
+     "title_purchase": "My Course Purchases",
+     "title_credit": "Credits Transactions History",
+     "title_manag": "Manage",
+	 "title_course":"Courses",
+	 "title_cert":"Certificates",
+	 "title_locat":"Locations",
+	 "title_type":"Preferred Teaching Type",
+	 "title_privacy":"Privacy",
+     "title_acount": "Account",
+	 "title_pers":"Personal Information",
+	 "title_prof":"Profile Information",
+	"title_addres":"My Address",
+	"title_pass":"Change Password",
+    "title_tutor":"Favourite Tutors",
+    "title_blog":"Blogs",
+    "title_fin":"Find Tutor",
+    "title_set": "Settings"
+
+  },
+
+  "tutorMenu":
+  {
+
+	   "title_Dashboard": "Dashboard",
+	   "title_booking": "Bookings",
+	   "title_lead": "Leads",
+	   "title_credit": "Credits Transactions History",
+	   "title_conv": "Credit Conversion Request",
+	   "title_manag": "Manage",
+	   "title_course":"Courses",
+	   "title_cert":"Certificates",
+	   "title_locat":"Locations",
+	   "title_type":"Teaching Type",
+	   "title_privacy":"Privacy",
+	   "title_acount": "Account",
+	   "title_pers":"Personal Information",
+	   "title_prof":"Profile Information",
+	   "title_exp":"Experience",
+	   "title_info":"Contact Information",
+	   "title_cat":"Course Categories",
+	  "title_addres":"My Address",
+	  "title_pass":"Change Password",
+	  "title_tutor":"Favourite Tutors",
+	  "title_blog":"Blogs",
+	  "title_set": "Settings"
+
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"cart": {
+		"header":"Totals",
+		"title": "Shopping cart",
+		"empty": "You don't like empty",
+		"shop": "Shop Now !",
+		"qty": "Qty:",
+		"have_coupon": "Have a Coupon?",
+		"coupon_here": "Coupon Code here...",
+		"apply": "Apply",
+		"add": "Coupon code applied successfully.",
+		"remove": "Coupon has been removed.",
+		"coupon_invalid": "Coupon code is invaild",
+		"already_applied": "Coupon code already applied!",
+		"discount": "You receive a discount of",
+		"totals": "Totals",
+		"total_price": "Total price:",
+		"tax": "Tax:",
+		"coupon_code": "Coupon",
+		"order_total": "Order Total:",
+		"checkout": "Check Out",
+		"confirm": {
+			"message": "You aren't login, if continue to checkout as guest. Do you want to login to manage your order?",
+			"yes": "Yes",
+			"no": "No"
+		},
+		"validate": "OK"
+	},
+	"detail": {
+		"title": "Detail",
+		"rating": "rating",
+		"review": "review",
+		"addToCart": "Add to cart",
+		"color": "Color",
+		"size": "Size",
+		"quantity": "Quantity",
+		"price": "Total Price",
+		"buyer_protection": "Buyer Protection",
+		"buyer_protection_text": "Returns accepted if product not as described, seller pays return shipping; or kepp the product & agree refund with seller.",
+		"about_this_item": "About This Item",
+		"sku": "SKU",
+		"available": "available",
+		"item_description": "Description",
+		"view_more": "View more",
+		"view_less": "View less",
+		"buy_the_look": "Buy The Look",
+		"favorite": {
+			"add": "Successfully added to Wishlist",
+			"remove": "Successfully removed from Wishlist"
+		},
+		"out_of_quantity": "Quantity available in stock: ",
+		"individually": {
+			"before": "You cannot add another ",
+			"after": " to your cart."
+		},
+		"add": "Add successfully",
+		"addOut": "Add successfully, can be backordered",
+		"outStock": "Out of stock",
+		"grouped": {
+			"variable": "Option >",
+			"button": "OK"
+		},
+		"have_not_variation": "No variation you choose",
+		"height": "Height",
+		"length": "Length",
+		"width": "Width"
+	},
+	"comments": {
+		"title": "All commenters",
+		"ratings_reviews": "Ratings & Reviews",
+		"rating": "rating",
+		"button": "RATE AND WRITE A REVIEW"
+	},
+	"rating": {
+		"title": "Write a review",
+		"comment_about": "Comment about this product",
+		"your_rating": "Your Rating:",
+		"name": "Name",
+		"email": "Email",
+		"comment": "Description Comments...",
+		"post": "Post Comment",
+		"fail": "Products are not allowed to comment"
+	},
+	"order": {
+		"title": "My order",
+		"empty": "You do not have any orders?",
+		"shop": "Shop Now !",
+		"id": "Order ID",
+		"date": "Date:",
+		"quantity": "Quantity:",
+		"item": "item",
+		"items": "items",
+		"ordered_by": "Ordered by:",
+		"total": "Total Amount:",
+		"details": "Details"
+	},
+	"detailOrder": {
+		"title": "Order ID: #",
+		"order_status": "Order status: ",
+		"address": "Address",
+		"change": "Change",
+		"delivery_address": "Delivery Address",
+		"billing_address": "Billing Address",
+		"shipping_method": "Shipping Method",
+		"order_detail": "Order(s) Detail",
+		"items": "Items",
+		"totals": "TOTALS",
+		"total_price": "Total Price:",
+		"shipping": "Shipping:",
+		"tax": "Tax:",
+		"coupon_code": "Coupon Code",
+		"order_total": "Order Total",
+		"payment_method": "Payment Method",
+		"free": "Free",
+		"cancel_order": "CANCEL ORDER",
+		"popup_cancel": {
+			"message": "Are you sure to cancel this order?",
+			"no": "NO",
+			"yes": "Accept",
+			"success": "Order status changed to Cancelled",
+			"fail": "Change order status failed"
+		}
+	},
+	"favorite": {
+		"title": "Favorite",
+		"clear": {
+			"title": "Clear",
+			"message": "Delete all Favorites?",
+			"no": "NO",
+			"yes": "YES"
+		},
+		"empty": "You don't like empty",
+		"shop": "Shop Now !"
+	},
+	"terms": {
+		"title": "Terms of use",
+		"intoduction": "Intoduction",
+		"first": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+		"content": [
+			"1.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+			"2.  Nemo enim ipsam voluptatem quia voluptas sit aspernatur"
+		]
+	},
+	"privacy": {
+		"title": "Privacy policy",
+		"first": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+		"content": [
+			{
+				"title": "1. What is a standardised",
+				"text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"
+			}
+		]
+	},
+	"contact": {
+		"title": "Contact Us",
+		"first_name":"First Name ",
+		"last_name":"Last Name",
+		"about": "About us",
+		"send_a_message": "Send a message",
+		"name": "Name",
+		"email": "Email Address",
+		"subject": "Subject",
+		"message": "Message here ....",
+		"send": "Send",
+		"success": "Your message has been sent!",
+		"error": "An error occurred, please try again"
+	},
+	"about": {
+		"title": "About us",
+		"welcome": "Welcome to senia shop",
+		"content": [
+			"Lorem ipsum dolor sit amet, ei pertinax perpetua intellegat duo. Quo te mediocrem salutandscripserit..",
+			"Forensibus, mel ne sonet virtute pertinacia. Mazim malorum probatus pro ex.Discere appete voluptatibus duo te, ne ocurreret appellantur eos.ad qui, pro probo tollit recusabo at. Accusata disputati oni ea nec.",
+			"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+		],
+		"contact": "Contact us"
+	},
+	"certificate":{
+		"title":"Upload Certificates",
+		"upload":"Upload certificates here"
+
+
+	},
+	"blog":{
+		"title":"Blogs",
+		"available":"No Blogs Available"
+	},
+	"chang_pass":{
+		"title":"Change Password",
+		"current_pass":"Current password ",
+		"new_pass":"New Password",
+		"confirm_pass":"Confirm Password ",
+		"Submit":"Submit"
+
+	},
+	"profile": {
+		"title": "Edit profile",
+		"edit": "Edit",
+		"current_password": "Current password",
+		"new_password": "New password",
+		"done": "Done",
+		"update_successfully": "Update successfully"
+	},
+	"address": {
+		"title": "Address",
+		"your_billing": "Your billing address",
+		"company": "Company",
+		"address_1": "Address 1 *",
+		"address_2": "Address 2",
+		"city": "City *",
+		"country": "Country *",
+		"states": "States *",
+		"zip": "Zip/Postal Code *",
+		"phone": "Mobile phone *",
+		"email": "Email address *",
+		"confirm": "Confirm",
+		"your_delivery": "Your delivery address",
+		"use_billing": "Use the delivery as the billing address"
+	},
+	"checkout": {
+		"title": "Check out",
+		"address": "Address",
+		"change": "Change",
+		"delivery_address": "Delivery Address",
+		"billing_address": "Billing Address",
+		"shipping_method": "Shipping Method",
+		"order_detail": "Order(s) Detail",
+		"item": "Item(s)",
+		"totals": "TOTALS",
+		"total_price": "Total Price:",
+		"shipping": "Shipping:",
+		"free": "Free",
+		"tax": "Tax:",
+		"coupon_code": "Coupon Code:",
+		"order_total": "Order Total",
+		"payment_method": "Select a Payment Method",
+		"confirm": "Confirm",
+		"has_error": {
+			"message": "An error occurred, please try again later.",
+			"button": "OK"
+		}
+	},
+	"states": {
+		"AL": "input",
+		"DZ": "input",
+		"AS": "input",
+		"AD": "input",
+		"AO": "input",
+		"AI": "input",
+		"AQ": "input",
+		"AG": "input",
+		"AM": "input",
+		"AW": "input",
+		"AZ": "input",
+		"BS": "input",
+		"BH": "input",
+		"BB": "input",
+		"BY": "input",
+		"PW": "input",
+		"BJ": "input",
+		"BM": "input",
+		"BT": "input",
+		"BO": "input",
+		"BQ": "input",
+		"BA": "input",
+		"BW": "input",
+		"IO": "input",
+		"VG": "input",
+		"BN": "input",
+		"BF": "input",
+		"CM": "input",
+		"CV": "input",
+		"KY": "input",
+		"CF": "input",
+		"TD": "input",
+		"CX": "input",
+		"CC": "input",
+		"CO": "input",
+		"KM": "input",
+		"CG": "input",
+		"CD": "input",
+		"CK": "input",
+		"CR": "input",
+		"HR": "input",
+		"CU": "input",
+		"CW": "input",
+		"CY": "input",
+		"DJ": "input",
+		"DM": "input",
+		"DO": "input",
+		"EC": "input",
+		"EG": "input",
+		"SV": "input",
+		"GQ": "input",
+		"ER": "input",
+		"ET": "input",
+		"FK": "input",
+		"FO": "input",
+		"FJ": "input",
+		"PF": "input",
+		"TF": "input",
+		"GA": "input",
+		"GM": "input",
+		"GE": "input",
+		"GH": "input",
+		"GI": "input",
+		"GL": "input",
+		"GD": "input",
+		"GU": "input",
+		"GT": "input",
+		"GG": "input",
+		"GN": "input",
+		"GW": "input",
+		"GY": "input",
+		"HT": "input",
+		"HM": "input",
+		"HN": "input",
+		"IM": "input",
+		"CI": "input",
+		"JM": "input",
+		"JE": "input",
+		"JO": "input",
+		"KZ": "input",
+		"KE": "input",
+		"KI": "input",
+		"KG": "input",
+		"LA": "input",
+		"LV": "input",
+		"LS": "input",
+		"LR": "input",
+		"LY": "input",
+		"LT": "input",
+		"LU": "input",
+		"MO": "input",
+		"MK": "input",
+		"MG": "input",
+		"MW": "input",
+		"MV": "input",
+		"ML": "input",
+		"MT": "input",
+		"MH": "input",
+		"MR": "input",
+		"MU": "input",
+		"FM": "input",
+		"MD": "input",
+		"MC": "input",
+		"MN": "input",
+		"ME": "input",
+		"MS": "input",
+		"MA": "input",
+		"MZ": "input",
+		"MM": "input",
+		"NA": "input",
+		"NR": "input",
+		"NC": "input",
+		"NI": "input",
+		"NE": "input",
+		"NU": "input",
+		"NF": "input",
+		"KP": "input",
+		"MP": "input",
+		"PS": "input",
+		"PA": "input",
+		"PG": "input",
+		"PY": "input",
+		"PN": "input",
+		"PR": "input",
+		"QA": "input",
+		"RO": "input",
+		"RU": "input",
+		"RW": "input",
+		"ST": "input",
+		"BL": "input",
+		"SH": "input",
+		"KN": "input",
+		"LC": "input",
+		"SX": "input",
+		"MF": "input",
+		"PM": "input",
+		"VC": "input",
+		"WS": "input",
+		"SM": "input",
+		"SA": "input",
+		"SN": "input",
+		"RS": "input",
+		"SC": "input",
+		"SL": "input",
+		"SB": "input",
+		"SO": "input",
+		"GS": "input",
+		"SS": "input",
+		"SD": "input",
+		"SR": "input",
+		"SJ": "input",
+		"SZ": "input",
+		"SY": "input",
+		"TW": "input",
+		"TJ": "input",
+		"TZ": "input",
+		"TL": "input",
+		"TG": "input",
+		"TK": "input",
+		"TO": "input",
+		"TT": "input",
+		"TN": "input",
+		"TC": "input",
+		"TV": "input",
+		"UG": "input",
+		"UA": "input",
+		"AE": "input",
+		"UM": "input",
+		"VI": "input",
+		"UY": "input",
+		"UZ": "input",
+		"VU": "input",
+		"VA": "input",
+		"VE": "input",
+		"EH": "input",
+		"YE": "input",
+		"ZM": "input",
+		"ZW": "input"
+	},
+	"thanks": {
+		"title": "YOUR ORDER HAS BEEN RECEIVED",
+		"yourID": "Your order ID is #",
+		"myOrder": "MY ORDER"
+	},
+	"latest": {
+		"title": "Latest"
+	}
+}

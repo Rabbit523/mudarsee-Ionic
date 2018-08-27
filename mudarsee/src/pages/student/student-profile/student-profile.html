@@ -1,0 +1,81 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+    <ion-title>{{'stu_profile.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="personalDetailsForm" novalidate (ngSubmit)="(personalDetailsForm.valid && submitted) && updatePersonalInformation()">
+    <div header-profile text-center>
+      <div class="user-img"><img src="{{user.photo}}" alt="Picture"></div>
+      <div class="user-details">
+        <h3>{{userData.username}}</h3>
+        <p><span>{{'stu_profile.net'|translate}}: {{userData.net_credits}}</span><span>{{'stu_profile.per'|translate}}: {{currency_symbol}}{{per_credit_value}}</span></p>
+      </div>
+    </div>
+    <ion-list contact-list>
+      <ion-item-divider color="light">{{'stu_profile.info'|translate}}</ion-item-divider>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.first'|translate}}</ion-label>
+        <ion-input type="text" formControlName="firstName" [(ngModel)]="userData.first_name"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!personalDetailsForm.controls.firstName.pristine || submitted" [name]="(!personalDetailsForm.controls.firstName.valid && (personalDetailsForm.controls.firstName.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!personalDetailsForm.controls.firstName.valid && (personalDetailsForm.controls.firstName.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.last'|translate}}</ion-label>
+        <ion-input type="text" formControlName="lastName" [(ngModel)]="userData.last_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.email'|translate}}</ion-label>
+        <ion-input type="email" readonly formControlName="email" [(ngModel)]="userData.email"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!personalDetailsForm.controls.email.pristine || submitted" [name]="(!personalDetailsForm.controls.email.valid && (personalDetailsForm.controls.email.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!personalDetailsForm.controls.email.valid && (personalDetailsForm.controls.email.dirty || submitted)) ? 'danger' : 'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.date'|translate}}</ion-label>
+        <ion-input type="date" formControlName="dateOfBirth" [(ngModel)]="userData.dob"></ion-input>
+        <ion-icon class="validation-icon" *ngIf="!personalDetailsForm.controls.dateOfBirth.pristine || submitted" [name]="(!personalDetailsForm.controls.dateOfBirth.valid && (personalDetailsForm.controls.dateOfBirth.dirty || submitted)) ? 'warning' : 'done-all'" [color]="(!personalDetailsForm.controls.dateOfBirth.valid && (personalDetailsForm.controls.dateOfBirth.dirty || submitted)) ? 'danger':'valid'" item-right></ion-icon>
+      </ion-item>
+      <ion-list radio-group formControlName="gender" [(ngModel)]="userData.gender">
+        <ion-list-header floating>{{'stu_profile.gender'|translate}}</ion-list-header>
+        <ion-item>
+          <ion-label>{{'stu_profile.male'|translate}}</ion-label>
+          <ion-radio value="Male"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{'stu_profile.female'|translate}}</ion-label>
+          <ion-radio value="Female"></ion-radio>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>{{'stu_profile.lang'|translate}}</ion-label>
+          <ion-select [(ngModel)]="selectedLanguages" formControlName="languageOfTeaching" multiple>
+            <ion-option *ngFor="let language of languages">{{language.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.blog'|translate}}</ion-label>
+        <ion-input type="text" formControlName="website" [(ngModel)]="userData.website"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.facebook'|translate}}</ion-label>
+        <ion-input type="text" formControlName="facebook" [(ngModel)]="userData.facebook"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.twitter'|translate}}</ion-label>
+        <ion-input type="text" formControlName="twitter" [(ngModel)]="userData.twitter"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.linkedin'|translate}}</ion-label>
+        <ion-input type="text" formControlName="linkedin" [(ngModel)]="userData.linkedin"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>{{'stu_profile.skype'|translate}}</ion-label>
+        <ion-input type="text" formControlName="skype" [(ngModel)]="userData.skype"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block round color="danger" type="submit" (click)="submitted=true">{{'stu_profile.submit'|translate}} </button>
+  </form>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon class="tuts-list"></ion-icon></button>
+    <ion-title> {{'stu_location.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<ion-list no-lines no-bg>
+        <div *ngFor="let location of locations; let i=index">
+            <button ion-item (click)="toggleGroup(i)" detail-none>
+                {{location.parentLocation_name}} 
+                <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+            </button>
+            <div *ngIf="isGroupShown(i)">
+                <ion-list *ngFor="let sub_location of location.sub_location">
+                    <ion-item>
+                        <ion-label>{{sub_location.sub_location_name}}</ion-label>
+                        <ion-checkbox color="dark" [(ngModel)]="sub_location.checked"></ion-checkbox>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </ion-list>
+    <button ion-button block round color="danger" (click)="updateLocations()"> {{'stu_location.update'|translate}}</button>
+</ion-content>

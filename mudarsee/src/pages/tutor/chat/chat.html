@@ -1,0 +1,39 @@
+<ion-header no-shadow>
+  <ion-navbar color="light">
+    <ion-list no-lines>
+      <ion-item color="light" class="chat_profile_header">
+        <ion-avatar avatar-small item-left> <img [src]="receiver.imageFullUrl"> </ion-avatar>
+        <h2 text-large>{{receiver.name}}</h2>
+        <p *ngIf="receiver.course_name!=''">{{receiver.course_name}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="clearfix" *ngFor="let msg of chat_filtered">
+    <div class="chatBubble">
+      <div class="chat-bubble {{msg.position}}">
+        <img class="profile-pic {{msg.position}}" src="{{msg.img}}">
+        <div class="message">{{msg.message}}</div>
+        <div class="message-detail">
+          <span class="time" *ngIf="msg.id==''">{{msg.datetime}}</span>
+          <span class="time" *ngIf="msg.id!=''">{{msg.datetime}}</span>
+          <ion-spinner *ngIf="msg.id==''" color="light" name="dots"></ion-spinner>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll position="top" *ngIf="showLoadMore==true" (ionInfinite)="getChatHistory($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-textarea placeholder="{{'stu_chat.placeholder'|translate}}" [(ngModel)]="chat.message"></ion-textarea>
+    <ion-buttons end>
+      <button ion-button color="success" class="button-xl" (click)="sendMessage(chat.message)" [attr.disabled]="chat.message.length!=0? null :'true'">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

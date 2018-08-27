@@ -1,0 +1,70 @@
+<ion-menu [content]="content" (ionOpen)="menuOpened()"
+[side]="menuSide"  (ionClose)="menuClosed()" id="lovelyMenu">
+    <ion-header transparent-header no-border class="menu-header">
+      <div header-profile text-center>
+        <div class="user-img"> <img src="{{userData.photo}}" alt=""> </div>
+        <div class="user-details">
+            <h3>{{userData.username}}</h3>
+            <p>{{userData.city}}</p>
+            <button ion-button round small color="danger">{{'my_address.net'|translate}}: {{userData.net_credits}}</button>
+        </div>
+    </div>     
+</ion-header>
+<ion-content sidemenu-list>
+    <ion-list class="list_sidemenu" no-lines no-bg>
+        <div *ngFor="let p of pages">
+            <button ion-item (click)="openPage(p)" detail-none text-wrap>
+                <ion-icon item-left class="{{p.icon}}"></ion-icon> {{p.name | translate}} 
+            </button>
+            <ion-list class="sub-menu" *ngFor="let subPages of p.subMenu">
+
+                <button ion-item *ngIf="subPages.showDetails" (click)="openPage(subPages)" detail-none>
+                    <ion-icon item-left class="{{subPages.icon}}"></ion-icon> {{subPages.name | translate}} 
+                </button>
+
+            </ion-list>
+
+        </div>
+        <button ion-item detail-none color="light" (click)="changeLanguage(data.Lang)">
+			<ion-icon class="tuts-settings" item-left></ion-icon>
+			<ion-label>{{'account.Language.title'|translate}}</ion-label>
+			<ion-note item-right text-capitalize>{{data.Lang}}</ion-note>
+		</button>
+    </ion-list>
+</ion-content> 
+</ion-menu>
+<!-- Right -->
+<!-- <ion-menu [content]="content" (ionOpen)="menuOpened()" [hidden]="data.dir!=='rtl'" 
+[side]="right"  (ionClose)="menuClosed()">
+    <ion-header transparent-header no-border class="menu-header">
+      <div header-profile text-center>
+        <div class="user-img"> <img src="{{userData.photo}}" alt=""> </div>
+        <div class="user-details">
+            <h3>{{userData.username}}</h3>
+            <p>{{userData.city}}</p>
+            <button ion-button round small color="danger">{{'my_address.net'|translate}}: {{userData.net_credits}}</button>
+        </div>
+    </div>     
+</ion-header>
+<ion-content sidemenu-list>
+    <ion-list class="list_sidemenu" no-lines no-bg>
+        <div *ngFor="let p of pages">
+            <button ion-item (click)="openPage(p)" detail-none text-wrap>
+                <ion-icon item-left class="{{p.icon}}"></ion-icon> {{p.title}} 
+            </button>
+            <ion-list class="sub-menu" *ngFor="let subPages of p.subMenu">
+                <button ion-item *ngIf="subPages.showDetails" (click)="openPage(subPages)" detail-none>
+                    <ion-icon item-left class="{{subPages.icon}}"></ion-icon> {{subPages.title}} 
+                </button>
+            </ion-list>
+
+        </div>
+        <button ion-item detail-none color="light" (click)="changeLanguage('en')">
+			<ion-icon name="ios-settings" item-left></ion-icon>
+			<ion-label>{{'account.Language.title'|translate}}</ion-label>
+			<ion-note item-right text-capitalize>{{'account.Language.option.ar'|translate}}</ion-note>
+		</button>
+    </ion-list>
+</ion-content> 
+</ion-menu> -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

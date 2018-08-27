@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{'stu_teaching_types.review'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let review of reviews">
+      <ion-item>
+        <ion-avatar item-left>
+          <img *ngIf="review.photo!=''" src="{{serviceName.profileImages}}{{review.photo}}">
+          <img *ngIf="review.photo==''" src="{{serviceName.defaultImage}}">
+        </ion-avatar>
+        <h2>{{'stu_teaching_types.per'|translate}}</h2>
+        <p><span color="dark"><ion-icon name="calendar"></ion-icon> {{review.posted_on | date:'MMM d, y'}}</span></p>
+        <div class="star" color="warning">
+          <rating [(ngModel)]="review.rating" max="5" readOnly="true"></rating>
+        </div>
+        <p color="danger">{{'stu_teaching_types.course'|translate}} : {{review.course}}</p>
+      </ion-item>
+      <ion-item text-wrap>
+        <p> {{review.comments}} </p>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+</ion-content>
+
+		

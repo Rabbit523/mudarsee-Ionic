@@ -1,0 +1,17 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle><ion-icon class="tuts-list"></ion-icon></button>
+    <ion-title>{{'my_course_purchases.title'|translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let course of coursePurchases">
+      <h2>{{course.course_title}}</h2>
+      <p><span>{{'my_course_purchases.name'|translate}}:</span> <strong> {{course.tutor_name}} </strong> </p>
+      <p><span>{{'my_course_purchases.purchases'|translate}}:</span> <strong> {{course.paid_date}} </strong> </p>
+      <p><span>{{'my_course_purchases.max'|translate}}:</span> <strong> {{course.max_downloads}} </strong> </p>
+      <p><span>{{'my_course_purchases.total'|translate}}:</span> <strong> {{course.total_downloads}} </strong></p>
+    </ion-item>
+  </ion-list>
+</ion-content>

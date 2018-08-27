@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon class="tuts-list"></ion-icon>
+    </button>
+        <ion-title>{{'certificate.title'|translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <p style="padding-left: 10px;">{{'certificate.upload'|translate}}   </p>
+    <ion-card *ngFor="let certificate of certificates">
+        <ion-item class="cert_card" (click)="downloadFile(certificate)">
+            <ion-thumbnail item-start class="certificate_thumb">
+                <img class="certificate_thumb" [src]="certificate.upload_fileTypeImage">
+            </ion-thumbnail>
+            <h2>{{certificate.title}}</h2>
+            <p>{{certificate.upload_status}}</p>
+        </ion-item>
+        <button ion-button clear item-end icon-only class="cert_add_btn" (click)="presentProfileModal(certificate)"><ion-icon name="md-add-circle"></ion-icon></button>
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <ion-fab bottom right>
+        <button ion-fab color="primary" (click)="callUploadRecursive(upload_certificates)" [attr.disabled]="upload_certificates.length!=0? null :'true'"><ion-icon class="tuts-upload"></ion-icon></button>
+    </ion-fab>
+</ion-footer>
